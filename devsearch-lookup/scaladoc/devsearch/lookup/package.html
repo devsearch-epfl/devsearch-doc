@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>lookup - devsearch.lookup</title>
+          <meta name="description" content="lookup - devsearch.lookup" />
+          <meta name="keywords" content="lookup devsearch.lookup" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'devsearch.lookup.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="devsearch">devsearch</a></p>
+        <h1>lookup</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lookup</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="devsearch.lookup.DocumentHits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DocumentHitsextendsProductwithSerializable"></a>
+      <a id="DocumentHits:DocumentHits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DocumentHits.html"><span class="name">DocumentHits</span></a><span class="params">(<span name="location">location: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="hits">hits: <span class="extype" name="scala.Stream">Stream</span>[<a href="Hit.html" class="extype" name="devsearch.lookup.Hit">Hit</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.FeatureEntry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FeatureEntryextendsProductwithSerializable"></a>
+      <a id="FeatureEntry:FeatureEntry"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FeatureEntry.html"><span class="name">FeatureEntry</span></a><span class="params">(<span name="loc">loc: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="feature">feature: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.Hit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HitextendsProductwithSerializable"></a>
+      <a id="Hit:Hit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Hit.html"><span class="name">Hit</span></a><span class="params">(<span name="line">line: <span class="extype" name="scala.Int">Int</span></span>, <span name="feature">feature: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.Location" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocationextendsProductwithSerializable"></a>
+      <a id="Location:Location"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Location.html"><span class="name">Location</span></a><span class="params">(<span name="owner">owner: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.LookupMerger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LookupMergerextendsActorwithActorLogging"></a>
+      <a id="LookupMerger:LookupMerger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LookupMerger.html"><span class="name">LookupMerger</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This actor is responsible for contacting each partition, to merge their
+results and to send it back to the requestor (Play app).</p>
+    </li><li name="devsearch.lookup.LookupProvider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LookupProviderextendsActorwithActorLogging"></a>
+      <a id="LookupProvider:LookupProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LookupProvider.html"><span class="name">LookupProvider</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This actor is the main entry point for search requests.</p>
+    </li><li name="devsearch.lookup.PartitionLookup" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionLookupextendsActorwithActorLogging"></a>
+      <a id="PartitionLookup:PartitionLookup"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionLookup.html"><span class="name">PartitionLookup</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This actor is permanently responsible for one partition of the database.</p>
+    </li><li name="devsearch.lookup.PartitionManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartitionManagerextendsActorwithActorLogging"></a>
+      <a id="PartitionManager:PartitionManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PartitionManager.html"><span class="name">PartitionManager</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">SmallestMailboxRoutingLogic
+This actor manages a partition node of the cluster.</p>
+    </li><li name="devsearch.lookup.RepoRanking" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RepoRankingextendsProductwithSerializable"></a>
+      <a id="RepoRanking:RepoRanking"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RepoRanking.html"><span class="name">RepoRanking</span></a><span class="params">(<span name="owner">owner: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="score">score: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.SearchRequest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SearchRequestextendsProductwithSerializable"></a>
+      <a id="SearchRequest:SearchRequest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SearchRequest.html"><span class="name">SearchRequest</span></a><span class="params">(<span name="features">features: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.SearchResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SearchResultextendsAnyRef"></a>
+      <a id="SearchResult:SearchResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SearchResult.html"><span class="name">SearchResult</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.SearchResultEntry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SearchResultEntryextendsProductwithSerializable"></a>
+      <a id="SearchResultEntry:SearchResultEntry"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SearchResultEntry.html"><span class="name">SearchResultEntry</span></a><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>, <span name="score">score: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.SearchResultError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SearchResultErrorextendsSearchResultwithProductwithSerializable"></a>
+      <a id="SearchResultError:SearchResultError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SearchResultError.html"><span class="name">SearchResultError</span></a><span class="params">(<span name="error">error: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.SearchResultSuccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SearchResultSuccessextendsSearchResultwithProductwithSerializable"></a>
+      <a id="SearchResultSuccess:SearchResultSuccess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SearchResultSuccess.html"><span class="name">SearchResultSuccess</span></a><span class="params">(<span name="entries">entries: <span class="extype" name="scala.Seq">Seq</span>[<a href="SearchResultEntry.html" class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</a>]</span>)</span><span class="result"> extends <a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="devsearch.lookup.DBSCAN" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DBSCAN"></a>
+      <a id="DBSCAN:DBSCAN"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DBSCAN$.html"><span class="name">DBSCAN</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Textbook implementation of the DBSCAN algorithm, a clustering algorithm that doesn't require
+knowing the number of clusters before-hand.</p>
+    </li><li name="devsearch.lookup.FeatureDB" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FeatureDB"></a>
+      <a id="FeatureDB:FeatureDB"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FeatureDB$.html"><span class="name">FeatureDB</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Interract with the db to fetch files and line for a query
+</p>
+    </li><li name="devsearch.lookup.FindNBest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FindNBest"></a>
+      <a id="FindNBest:FindNBest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FindNBest$.html"><span class="name">FindNBest</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.FindNBestOld" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FindNBestOld"></a>
+      <a id="FindNBestOld:FindNBestOld"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FindNBestOld$.html"><span class="name">FindNBestOld</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">QuickSelect algorithm
+http://en.</p>
+    </li><li name="devsearch.lookup.Main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Main"></a>
+      <a id="Main:Main"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Main$.html"><span class="name">Main</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.RankingDB" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RankingDB"></a>
+      <a id="RankingDB:RankingDB"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RankingDB$.html"><span class="name">RankingDB</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Interract with the db to fetch files and line for a query
+</p>
+    </li><li name="devsearch.lookup.RawDB" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RawDB"></a>
+      <a id="RawDB:RawDB"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RawDB$.html"><span class="name">RawDB</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+    </body>
+      </html>
