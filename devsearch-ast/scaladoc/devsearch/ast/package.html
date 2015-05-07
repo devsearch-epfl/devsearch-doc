@@ -1,0 +1,1371 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>ast - devsearch.ast</title>
+          <meta name="description" content="ast - devsearch.ast" />
+          <meta name="keywords" content="ast devsearch.ast" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'devsearch.ast.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="devsearch">devsearch</a></p>
+        <h1>ast</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ast</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="devsearch.ast.AST" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ASTextendsPositionalwithCommentablewithSerializable"></a>
+      <a id="AST:AST"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AST.html"><span class="name">AST</span></a><span class="result"> extends <a href="Positional.html" class="extype" name="devsearch.ast.Positional">Positional</a> with <a href="Commentable.html" class="extype" name="devsearch.ast.Commentable">Commentable</a> with <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A generic Abstract Syntax Tree format</p>
+    </li><li name="devsearch.ast.Annotation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AnnotationextendsExprwithProductwithSerializable"></a>
+      <a id="Annotation:Annotation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Annotation.html"><span class="name">Annotation</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="params">params: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>] = <span class="defval" name="scala.this.Predef.Map.empty[String, Nothing]">...</span></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Annotation expression</p>
+    </li><li name="devsearch.ast.AnnotationDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AnnotationDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="AnnotationDef:AnnotationDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AnnotationDef.html"><span class="name">AnnotationDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="members">members: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Annotation definition</p>
+    </li><li name="devsearch.ast.ArrayAccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrayAccessextendsExprwithProductwithSerializable"></a>
+      <a id="ArrayAccess:ArrayAccess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ArrayAccess.html"><span class="name">ArrayAccess</span></a><span class="params">(<span name="array">array: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="index">index: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Array index access, in java, <code>a[i]</code>.</p>
+    </li><li name="devsearch.ast.ArrayLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrayLiteralextendsExprwithProductwithSerializable"></a>
+      <a id="ArrayLiteral:ArrayLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ArrayLiteral.html"><span class="name">ArrayLiteral</span></a><span class="params">(<span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="dimensions">dimensions: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>, <span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Array literal</p>
+    </li><li name="devsearch.ast.ArrayType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArrayTypeextendsTypewithProductwithSerializable"></a>
+      <a id="ArrayType:ArrayType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ArrayType.html"><span class="name">ArrayType</span></a><span class="params">(<span name="base">base: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Array type</p>
+    </li><li name="devsearch.ast.Assert" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AssertextendsStatementwithProductwithSerializable"></a>
+      <a id="Assert:Assert"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Assert.html"><span class="name">Assert</span></a><span class="params">(<span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="message">message: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Assertion statement that will throw an exception if the condition doesn't hold at runtime</p>
+    </li><li name="devsearch.ast.Assign" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AssignextendsExprwithProductwithSerializable"></a>
+      <a id="Assign:Assign"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Assign.html"><span class="name">Assign</span></a><span class="params">(<span name="target">target: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="value">value: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="operator">operator: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Assignment expression</p>
+    </li><li name="devsearch.ast.BinaryOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BinaryOpextendsExprwithProductwithSerializable"></a>
+      <a id="BinaryOp:BinaryOp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BinaryOp.html"><span class="name">BinaryOp</span></a><span class="params">(<span name="left">left: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="operator">operator: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="right">right: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Binary operation</p>
+    </li><li name="devsearch.ast.Bind" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BindextendsExprwithProductwithSerializable"></a>
+      <a id="Bind:Bind"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Bind.html"><span class="name">Bind</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Binding from an identifier to an expression, like i @ _ in Scala</p>
+    </li><li name="devsearch.ast.Block" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BlockextendsExprwithProductwithSerializable"></a>
+      <a id="Block:Block"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Block.html"><span class="name">Block</span></a><span class="params">(<span name="statements">statements: <span class="extype" name="scala.List">List</span>[<a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A flexible block structure</p>
+    </li><li name="devsearch.ast.Break" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BreakextendsStatementwithProductwithSerializable"></a>
+      <a id="Break:Break"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Break.html"><span class="name">Break</span></a><span class="params">(<span name="target">target: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Loop break statement that can provide a label for go-to functionality</p>
+    </li><li name="devsearch.ast.Cast" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CastextendsExprwithProductwithSerializable"></a>
+      <a id="Cast:Cast"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Cast.html"><span class="name">Cast</span></a><span class="params">(<span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Cast expression</p>
+    </li><li name="devsearch.ast.ClassAccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassAccessextendsExprwithProductwithSerializable"></a>
+      <a id="ClassAccess:ClassAccess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassAccess.html"><span class="name">ClassAccess</span></a><span class="params">(<span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Runtime class instance access</p>
+    </li><li name="devsearch.ast.ClassDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="ClassDef:ClassDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassDef.html"><span class="name">ClassDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="TypeDef.html" class="extype" name="devsearch.ast.TypeDef">TypeDef</a>]</span>, <span name="superClasses">superClasses: <span class="extype" name="scala.List">List</span>[<a href="ClassType.html" class="extype" name="devsearch.ast.ClassType">ClassType</a>]</span>, <span name="definitions">definitions: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>, <span name="sort">sort: <a href="StructuralSort.html" class="extype" name="devsearch.ast.StructuralSort">StructuralSort</a> = <span class="symbol">ClassSort</span></span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class definition</p>
+    </li><li name="devsearch.ast.ClassType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassTypeextendsTypewithProductwithSerializable"></a>
+      <a id="ClassType:ClassType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassType.html"><span class="name">ClassType</span></a><span class="params">(<span name="scope">scope: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Class type</p>
+    </li><li name="devsearch.ast.Commentable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CommentableextendsAnyRef"></a>
+      <a id="Commentable:Commentable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Commentable.html"><span class="name">Commentable</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Commentable</p>
+    </li><li name="devsearch.ast.ComplexType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComplexTypeextendsTypewithProductwithSerializable"></a>
+      <a id="ComplexType:ComplexType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ComplexType.html"><span class="name">ComplexType</span></a><span class="params">(<span name="parents">parents: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="definitions">definitions: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>, <span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Complex type that encompasses refinement types, sum types, .</p>
+    </li><li name="devsearch.ast.ConstructorCall" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConstructorCallextendsExprwithProductwithSerializable"></a>
+      <a id="ConstructorCall:ConstructorCall"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ConstructorCall.html"><span class="name">ConstructorCall</span></a><span class="params">(<span name="tpe">tpe: <a href="ClassType.html" class="extype" name="devsearch.ast.ClassType">ClassType</a></span>, <span name="args">args: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>, <span name="body">body: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Constructor call (or object creation)</p>
+    </li><li name="devsearch.ast.ConstructorDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConstructorDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="ConstructorDef:ConstructorDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ConstructorDef.html"><span class="name">ConstructorDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="TypeDef.html" class="extype" name="devsearch.ast.TypeDef">TypeDef</a>]</span>, <span name="params">params: <span class="extype" name="scala.List">List</span>[<a href="ValDef.html" class="extype" name="devsearch.ast.ValDef">ValDef</a>]</span>, <span name="body">body: <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a></span>, <span name="isDestructor">isDestructor: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Constructor definition</p>
+    </li><li name="devsearch.ast.ContentsSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContentsSourceextendsSource"></a>
+      <a id="ContentsSource:ContentsSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContentsSource.html"><span class="name">ContentsSource</span></a><span class="result"> extends <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.Continue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContinueextendsStatementwithProductwithSerializable"></a>
+      <a id="Continue:Continue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Continue.html"><span class="name">Continue</span></a><span class="params">(<span name="target">target: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Loop continue statement that can also provide a label for go-to functionality</p>
+    </li><li name="devsearch.ast.Definition" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DefinitionextendsStatement"></a>
+      <a id="Definition:Definition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Definition.html"><span class="name">Definition</span></a><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Definition super type</p>
+    </li><li name="devsearch.ast.Do" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DoextendsStatementwithProductwithSerializable"></a>
+      <a id="Do:Do"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Do.html"><span class="name">Do</span></a><span class="params">(<span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Do-while loop</p>
+    </li><li name="devsearch.ast.EnumConstantDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EnumConstantDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="EnumConstantDef:EnumConstantDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EnumConstantDef.html"><span class="name">EnumConstantDef</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="args">args: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>, <span name="members">members: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Enum constant member definition</p>
+    </li><li name="devsearch.ast.EnumDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EnumDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="EnumDef:EnumDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EnumDef.html"><span class="name">EnumDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="superTraits">superTraits: <span class="extype" name="scala.List">List</span>[<a href="ClassType.html" class="extype" name="devsearch.ast.ClassType">ClassType</a>]</span>, <span name="definitions">definitions: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>, <span name="entries">entries: <span class="extype" name="scala.List">List</span>[<a href="EnumConstantDef.html" class="extype" name="devsearch.ast.EnumConstantDef">EnumConstantDef</a>]</span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Enum definition</p>
+    </li><li name="devsearch.ast.Expr" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExprextendsStatement"></a>
+      <a id="Expr:Expr"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Expr.html"><span class="name">Expr</span></a><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Expression super type</p>
+    </li><li name="devsearch.ast.ExtractionValDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExtractionValDefextendsValueDefinitionwithProductwithSerializable"></a>
+      <a id="ExtractionValDef:ExtractionValDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ExtractionValDef.html"><span class="name">ExtractionValDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="pattern">pattern: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="rhs">rhs: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="ValueDefinition.html" class="extype" name="devsearch.ast.ValueDefinition">ValueDefinition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Extraction value definition</p>
+    </li><li name="devsearch.ast.FieldAccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FieldAccessextendsExprwithProductwithSerializable"></a>
+      <a id="FieldAccess:FieldAccess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FieldAccess.html"><span class="name">FieldAccess</span></a><span class="params">(<span name="receiver">receiver: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Object or other structural type field access</p>
+    </li><li name="devsearch.ast.FileSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileSourceextendsSource"></a>
+      <a id="FileSource:FileSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileSource.html"><span class="name">FileSource</span></a><span class="result"> extends <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.For" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ForextendsStatementwithProductwithSerializable"></a>
+      <a id="For:For"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="For.html"><span class="name">For</span></a><span class="params">(<span name="vals">vals: <span class="extype" name="scala.List">List</span>[<a href="ValDef.html" class="extype" name="devsearch.ast.ValDef">ValDef</a>]</span>, <span name="inits">inits: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>, <span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="updates">updates: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">For loop</p>
+    </li><li name="devsearch.ast.Foreach" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ForeachextendsExprwithProductwithSerializable"></a>
+      <a id="Foreach:Foreach"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Foreach.html"><span class="name">Foreach</span></a><span class="params">(<span name="vals">vals: <span class="extype" name="scala.List">List</span>[<a href="ValDef.html" class="extype" name="devsearch.ast.ValDef">ValDef</a>]</span>, <span name="iterable">iterable: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>, <span name="generator">generator: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Foreach loop</p>
+    </li><li name="devsearch.ast.FunctionCall" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FunctionCallextendsExprwithProductwithSerializable"></a>
+      <a id="FunctionCall:FunctionCall"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FunctionCall.html"><span class="name">FunctionCall</span></a><span class="params">(<span name="receiver">receiver: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="args">args: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function call</p>
+    </li><li name="devsearch.ast.FunctionDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FunctionDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="FunctionDef:FunctionDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FunctionDef.html"><span class="name">FunctionDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="TypeDef.html" class="extype" name="devsearch.ast.TypeDef">TypeDef</a>]</span>, <span name="params">params: <span class="extype" name="scala.List">List</span>[<a href="ValDef.html" class="extype" name="devsearch.ast.ValDef">ValDef</a>]</span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="body">body: <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a></span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function definition</p>
+    </li><li name="devsearch.ast.FunctionLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FunctionLiteralextendsExprwithProductwithSerializable"></a>
+      <a id="FunctionLiteral:FunctionLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FunctionLiteral.html"><span class="name">FunctionLiteral</span></a><span class="params">(<span name="params">params: <span class="extype" name="scala.List">List</span>[<a href="ValDef.html" class="extype" name="devsearch.ast.ValDef">ValDef</a>]</span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function literal</p>
+    </li><li name="devsearch.ast.FunctionType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FunctionTypeextendsTypewithProductwithSerializable"></a>
+      <a id="FunctionType:FunctionType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FunctionType.html"><span class="name">FunctionType</span></a><span class="params">(<span name="from">from: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="to">to: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Function type</p>
+    </li><li name="devsearch.ast.Guarded" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GuardedextendsExprwithProductwithSerializable"></a>
+      <a id="Guarded:Guarded"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Guarded.html"><span class="name">Guarded</span></a><span class="params">(<span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Guarded expression</p>
+    </li><li name="devsearch.ast.Ident" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IdentextendsExprwithProductwithSerializable"></a>
+      <a id="Ident:Ident"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Ident.html"><span class="name">Ident</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Identifier as in reference to local variable</p>
+    </li><li name="devsearch.ast.If" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IfextendsExprwithProductwithSerializable"></a>
+      <a id="If:If"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="If.html"><span class="name">If</span></a><span class="params">(<span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="thenStatement">thenStatement: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>, <span name="elseStatement">elseStatement: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Basic if expression</p>
+    </li><li name="devsearch.ast.Import" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ImportextendsStatementwithProductwithSerializable"></a>
+      <a id="Import:Import"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Import.html"><span class="name">Import</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="asterisk">asterisk: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="static">static: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Import statement</p>
+    </li><li name="devsearch.ast.Initializer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InitializerextendsDefinitionwithProductwithSerializable"></a>
+      <a id="Initializer:Initializer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Initializer.html"><span class="name">Initializer</span></a><span class="params">(<span name="isStatic">isStatic: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="body">body: <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a></span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Initializer statement</p>
+    </li><li name="devsearch.ast.InstanceOf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InstanceOfextendsExprwithProductwithSerializable"></a>
+      <a id="InstanceOf:InstanceOf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="InstanceOf.html"><span class="name">InstanceOf</span></a><span class="params">(<span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Instance of check</p>
+    </li><li name="devsearch.ast.LinePosition" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LinePositionextendsPosition"></a>
+      <a id="LinePosition:LinePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="LinePosition.html"><span class="name">LinePosition</span></a><span class="result"> extends <a href="Position.html" class="extype" name="devsearch.ast.Position">Position</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.LineRangePosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LineRangePositionextendsLinePositionwithProductwithSerializable"></a>
+      <a id="LineRangePosition:LineRangePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LineRangePosition.html"><span class="name">LineRangePosition</span></a><span class="params">(<span name="source">source: <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>, <span name="end">end: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="LinePosition.html" class="extype" name="devsearch.ast.LinePosition">LinePosition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.MapLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MapLiteralextendsExprwithProductwithSerializable"></a>
+      <a id="MapLiteral:MapLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapLiteral.html"><span class="name">MapLiteral</span></a><span class="params">(<span name="elements">elements: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>)]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Map or object literal</p>
+    </li><li name="devsearch.ast.MethodAccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MethodAccessextendsExprwithProductwithSerializable"></a>
+      <a id="MethodAccess:MethodAccess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MethodAccess.html"><span class="name">MethodAccess</span></a><span class="params">(<span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Static method access</p>
+    </li><li name="devsearch.ast.Modifiers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModifiersextendsSerializable"></a>
+      <a id="Modifiers:Modifiers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Modifiers.html"><span class="name">Modifiers</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Modifiers</p>
+    </li><li name="devsearch.ast.MultiLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MultiLiteralextendsExprwithProductwithSerializable"></a>
+      <a id="MultiLiteral:MultiLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MultiLiteral.html"><span class="name">MultiLiteral</span></a><span class="params">(<span name="elements">elements: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Pair or sequence literal</p>
+    </li><li name="devsearch.ast.NamedStatement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NamedStatementextendsStatementwithProductwithSerializable"></a>
+      <a id="NamedStatement:NamedStatement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="NamedStatement.html"><span class="name">NamedStatement</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="statement">statement: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Named statement</p>
+    </li><li name="devsearch.ast.PackageDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PackageDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="PackageDef:PackageDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PackageDef.html"><span class="name">PackageDef</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="imports">imports: <span class="extype" name="scala.List">List</span>[<a href="Import.html" class="extype" name="devsearch.ast.Import">Import</a>]</span>, <span name="definitions">definitions: <span class="extype" name="scala.List">List</span>[<a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a>]</span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Package definition</p>
+    </li><li name="devsearch.ast.Position" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PositionextendsSerializable"></a>
+      <a id="Position:Position"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Position.html"><span class="name">Position</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A general position type that gives point-like position in a given source file.</p>
+    </li><li name="devsearch.ast.Positional" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PositionalextendsAnyRef"></a>
+      <a id="Positional:Positional"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Positional.html"><span class="name">Positional</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Copied over from https://github.</p>
+    </li><li name="devsearch.ast.PrimitiveType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PrimitiveTypeextendsTypewithUnassignable"></a>
+      <a id="PrimitiveType:PrimitiveType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PrimitiveType.html"><span class="name">PrimitiveType</span></a><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Primitive type</p>
+    </li><li name="devsearch.ast.RangePosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RangePositionextendsPositionwithProductwithSerializable"></a>
+      <a id="RangePosition:RangePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RangePosition.html"><span class="name">RangePosition</span></a><span class="params">(<span name="source">source: <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>, <span name="start">start: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>, <span name="end">end: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>)</span><span class="result"> extends <a href="Position.html" class="extype" name="devsearch.ast.Position">Position</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Range position that gives both start and end-points to a position</p>
+    </li><li name="devsearch.ast.Return" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReturnextendsStatementwithProductwithSerializable"></a>
+      <a id="Return:Return"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Return.html"><span class="name">Return</span></a><span class="params">(<span name="value">value: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Return statement</p>
+    </li><li name="devsearch.ast.SimpleLinePosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleLinePositionextendsLinePositionwithProductwithSerializable"></a>
+      <a id="SimpleLinePosition:SimpleLinePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleLinePosition.html"><span class="name">SimpleLinePosition</span></a><span class="params">(<span name="source">source: <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="LinePosition.html" class="extype" name="devsearch.ast.LinePosition">LinePosition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.SimpleLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleLiteralextendsExprwithProductwithSerializable"></a>
+      <a id="SimpleLiteral:SimpleLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleLiteral.html"><span class="name">SimpleLiteral</span></a><span class="params">(<span name="tpe">tpe: <a href="PrimitiveType.html" class="extype" name="devsearch.ast.PrimitiveType">PrimitiveType</a></span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Simple literal</p>
+    </li><li name="devsearch.ast.SimplePosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimplePositionextendsPositionwithProductwithSerializable"></a>
+      <a id="SimplePosition:SimplePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimplePosition.html"><span class="name">SimplePosition</span></a><span class="params">(<span name="source">source: <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>, <span name="col">col: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Position.html" class="extype" name="devsearch.ast.Position">Position</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Concrete point-like position</p>
+    </li><li name="devsearch.ast.Source" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SourceextendsSerializable"></a>
+      <a id="Source:Source"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Source.html"><span class="name">Source</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Source</p>
+    </li><li name="devsearch.ast.SourceCreationError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SourceCreationErrorextendsExceptionwithProductwithSerializable"></a>
+      <a id="SourceCreationError:SourceCreationError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SourceCreationError.html"><span class="name">SourceCreationError</span></a><span class="params">(<span name="cause">cause: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.Statement" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StatementextendsAST"></a>
+      <a id="Statement:Statement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Statement.html"><span class="name">Statement</span></a><span class="result"> extends <a href="AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.StructuralSort" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StructuralSortextendsSerializable"></a>
+      <a id="StructuralSort:StructuralSort"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StructuralSort.html"><span class="name">StructuralSort</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">We use <a href="ClassDef.html" class="extype" name="devsearch.ast.ClassDef">ClassDef</a> to model all kinds of classes/traits/interfaces/structs/.</p>
+    </li><li name="devsearch.ast.Super" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SuperextendsExprwithProductwithSerializable"></a>
+      <a id="Super:Super"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Super.html"><span class="name">Super</span></a><span class="params">(<span name="qualifier">qualifier: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Super expression, can be specialized with a type</p>
+    </li><li name="devsearch.ast.SuperCall" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SuperCallextendsStatementwithProductwithSerializable"></a>
+      <a id="SuperCall:SuperCall"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SuperCall.html"><span class="name">SuperCall</span></a><span class="params">(<span name="qualifier">qualifier: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="args">args: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Super call for reference to super constructor</p>
+    </li><li name="devsearch.ast.Switch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SwitchextendsExprwithProductwithSerializable"></a>
+      <a id="Switch:Switch"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Switch.html"><span class="name">Switch</span></a><span class="params">(<span name="selector">selector: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="entries">entries: <span class="extype" name="scala.List">List</span>[(<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>, <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a>)]</span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Switch expression</p>
+    </li><li name="devsearch.ast.Synchronize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SynchronizeextendsStatementwithProductwithSerializable"></a>
+      <a id="Synchronize:Synchronize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Synchronize.html"><span class="name">Synchronize</span></a><span class="params">(<span name="lock">lock: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Thread locking construct</p>
+    </li><li name="devsearch.ast.TernaryOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TernaryOpextendsExprwithProductwithSerializable"></a>
+      <a id="TernaryOp:TernaryOp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TernaryOp.html"><span class="name">TernaryOp</span></a><span class="params">(<span name="cond">cond: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="thenn">thenn: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="elze">elze: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Ternary operation</p>
+    </li><li name="devsearch.ast.This" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThisextendsExprwithProductwithSerializable"></a>
+      <a id="This:This"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="This.html"><span class="name">This</span></a><span class="params">(<span name="qualifier">qualifier: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This expression, can be specialized with a type</p>
+    </li><li name="devsearch.ast.ThisCall" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThisCallextendsStatementwithProductwithSerializable"></a>
+      <a id="ThisCall:ThisCall"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ThisCall.html"><span class="name">ThisCall</span></a><span class="params">(<span name="qualifier">qualifier: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="args">args: <span class="extype" name="scala.List">List</span>[<a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a>]</span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This call for reference to other constructors</p>
+    </li><li name="devsearch.ast.Throw" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ThrowextendsExprwithProductwithSerializable"></a>
+      <a id="Throw:Throw"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Throw.html"><span class="name">Throw</span></a><span class="params">(<span name="expr">expr: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Throw expression, as in <code>throw new RuntimeException(&quot;Haha you failed!&quot;)</code></p>
+    </li><li name="devsearch.ast.Transformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransformerextendsAnyRef"></a>
+      <a id="Transformer:Transformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Simple transformer class</p>
+    </li><li name="devsearch.ast.Traverser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TraverserextendsAnyRef"></a>
+      <a id="Traverser:Traverser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Traverser.html"><span class="name">Traverser</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Simple traverser class</p>
+    </li><li name="devsearch.ast.Try" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TryextendsExprwithProductwithSerializable"></a>
+      <a id="Try:Try"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Try.html"><span class="name">Try</span></a><span class="params">(<span name="tryBlock">tryBlock: <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a></span>, <span name="catchs">catchs: <span class="extype" name="scala.List">List</span>[(<a href="ValueDefinition.html" class="extype" name="devsearch.ast.ValueDefinition">ValueDefinition</a>, <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a>)]</span>, <span name="finallyBlock">finallyBlock: <a href="Block.html" class="extype" name="devsearch.ast.Block">Block</a></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A basic try-catch-finally block</p>
+    </li><li name="devsearch.ast.Type" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TypeextendsAST"></a>
+      <a id="Type:Type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Type.html"><span class="name">Type</span></a><span class="result"> extends <a href="AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.TypeDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TypeDefextendsDefinitionwithProductwithSerializable"></a>
+      <a id="TypeDef:TypeDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeDef.html"><span class="name">TypeDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tparams">tparams: <span class="extype" name="scala.List">List</span>[<a href="TypeDef.html" class="extype" name="devsearch.ast.TypeDef">TypeDef</a>]</span>, <span name="lowerBounds">lowerBounds: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>, <span name="superBounds">superBounds: <span class="extype" name="scala.List">List</span>[<a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a>]</span>)</span><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Type definition</p>
+    </li><li name="devsearch.ast.TypeHint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TypeHintextendsTypewithProductwithSerializable"></a>
+      <a id="TypeHint:TypeHint"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeHint.html"><span class="name">TypeHint</span></a><span class="params">(<span name="hint">hint: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Type hint or unparsed type</p>
+    </li><li name="devsearch.ast.UnaryOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnaryOpextendsExprwithProductwithSerializable"></a>
+      <a id="UnaryOp:UnaryOp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnaryOp.html"><span class="name">UnaryOp</span></a><span class="params">(<span name="operand">operand: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="operator">operator: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="postfix">postfix: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Unary operation</p>
+    </li><li name="devsearch.ast.Unassignable" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UnassignableextendsAST"></a>
+      <a id="Unassignable:Unassignable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Unassignable.html"><span class="name">Unassignable</span></a><span class="result"> extends <a href="AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Special trait for objects to guarantee we don't associate positions or comments with
+case objects that are reused in multiple places in the AST
+</p>
+    </li><li name="devsearch.ast.ValDef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValDefextendsValueDefinitionwithProductwithSerializable"></a>
+      <a id="ValDef:ValDef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ValDef.html"><span class="name">ValDef</span></a><span class="params">(<span name="modifiers">modifiers: <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="annotations">annotations: <span class="extype" name="scala.List">List</span>[<a href="Annotation.html" class="extype" name="devsearch.ast.Annotation">Annotation</a>]</span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="rhs">rhs: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="varArgs">varArgs: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <a href="ValueDefinition.html" class="extype" name="devsearch.ast.ValueDefinition">ValueDefinition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Value definition</p>
+    </li><li name="devsearch.ast.ValueDefinition" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ValueDefinitionextendsDefinition"></a>
+      <a id="ValueDefinition:ValueDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ValueDefinition.html"><span class="name">ValueDefinition</span></a><span class="result"> extends <a href="Definition.html" class="extype" name="devsearch.ast.Definition">Definition</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Super-trait of value definitions, namely <code>ValDef</code> and <code>ExtractionValDef</code></p>
+    </li><li name="devsearch.ast.While" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WhileextendsStatementwithProductwithSerializable"></a>
+      <a id="While:While"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="While.html"><span class="name">While</span></a><span class="params">(<span name="condition">condition: <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a></span>, <span name="body">body: <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a></span>)</span><span class="result"> extends <a href="Statement.html" class="extype" name="devsearch.ast.Statement">Statement</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">While loop</p>
+    </li><li name="devsearch.ast.WildcardType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WildcardTypeextendsTypewithProductwithSerializable"></a>
+      <a id="WildcardType:WildcardType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="WildcardType.html"><span class="name">WildcardType</span></a><span class="params">(<span name="subType">subType: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>, <span name="superType">superType: <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a></span>)</span><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Wildcard type</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="devsearch.ast.AnyType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AnyType"></a>
+      <a id="AnyType:AnyType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AnyType$.html"><span class="name">AnyType</span></a><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Any type</p>
+    </li><li name="devsearch.ast.BottomType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BottomType"></a>
+      <a id="BottomType:BottomType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BottomType$.html"><span class="name">BottomType</span></a><span class="result"> extends <a href="Type.html" class="extype" name="devsearch.ast.Type">Type</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Bottom type</p>
+    </li><li name="devsearch.ast.ClassSort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassSort"></a>
+      <a id="ClassSort:ClassSort"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClassSort$.html"><span class="name">ClassSort</span></a><span class="result"> extends <a href="StructuralSort.html" class="extype" name="devsearch.ast.StructuralSort">StructuralSort</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.ContentsSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContentsSource"></a>
+      <a id="ContentsSource:ContentsSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ContentsSource$.html"><span class="name">ContentsSource</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.Empty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Empty"></a>
+      <a id="Empty:Empty"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Empty$.html"><span class="name">Empty</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.Modifiers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Modifiers"></a>
+      <a id="Modifiers:Modifiers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Modifiers$.html"><span class="name">Modifiers</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Exhaustive list of supported <a href="Modifiers.html" class="extype" name="devsearch.ast.Modifiers">Modifiers</a></p>
+    </li><li name="devsearch.ast.Names" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Names"></a>
+      <a id="Names:Names"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Names$.html"><span class="name">Names</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.NoPosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoPosition"></a>
+      <a id="NoPosition:NoPosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoPosition$.html"><span class="name">NoPosition</span></a><span class="result"> extends <a href="Position.html" class="extype" name="devsearch.ast.Position">Position</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Empty position for initializing node positions</p>
+    </li><li name="devsearch.ast.NoSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoSource"></a>
+      <a id="NoSource:NoSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoSource$.html"><span class="name">NoSource</span></a><span class="result"> extends <a href="Source.html" class="extype" name="devsearch.ast.Source">Source</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.NullLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NullLiteral"></a>
+      <a id="NullLiteral:NullLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NullLiteral$.html"><span class="name">NullLiteral</span></a><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Null literal, <code>null</code> in java</p>
+    </li><li name="devsearch.ast.Operators" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Operators"></a>
+      <a id="Operators:Operators"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Operators$.html"><span class="name">Operators</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.PrimitiveTypes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrimitiveTypes"></a>
+      <a id="PrimitiveTypes:PrimitiveTypes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PrimitiveTypes$.html"><span class="name">PrimitiveTypes</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Enumeration of primitive types</p>
+    </li><li name="devsearch.ast.StructSort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StructSort"></a>
+      <a id="StructSort:StructSort"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StructSort$.html"><span class="name">StructSort</span></a><span class="result"> extends <a href="StructuralSort.html" class="extype" name="devsearch.ast.StructuralSort">StructuralSort</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.TraitSort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TraitSort"></a>
+      <a id="TraitSort:TraitSort"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TraitSort$.html"><span class="name">TraitSort</span></a><span class="result"> extends <a href="StructuralSort.html" class="extype" name="devsearch.ast.StructuralSort">StructuralSort</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.ast.VoidLiteral" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VoidLiteral"></a>
+      <a id="VoidLiteral:VoidLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VoidLiteral$.html"><span class="name">VoidLiteral</span></a><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Void literal, like <code>Unit</code> in scala</p>
+    </li><li name="devsearch.ast.Wildcard" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Wildcard"></a>
+      <a id="Wildcard:Wildcard"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Wildcard$.html"><span class="name">Wildcard</span></a><span class="result"> extends <a href="Expr.html" class="extype" name="devsearch.ast.Expr">Expr</a> with <a href="Unassignable.html" class="extype" name="devsearch.ast.Unassignable">Unassignable</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Wildcard expression</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+    </body>
+      </html>
