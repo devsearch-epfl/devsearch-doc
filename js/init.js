@@ -44,7 +44,9 @@ $(function () {
             '<span class="card-title grey-text text-darken-3">' +
             '<i class="mdi-hardware-keyboard-arrow-right prefix"></i>' +
             repo.name +
-            '<img class="right" src="https://travis-ci.org/devsearch-epfl/'+repo.name+'.svg?branch=master">' +
+            '<a style="margin-right: 0px;" class="right" href="https://travis-ci.org/devsearch-epfl/'+repo.name+'">'+
+            '<img src="https://travis-ci.org/devsearch-epfl/'+repo.name+'.svg?branch='+repo.default_branch+'">' +
+            '</a>' +
             '</span>' +
 
             '<div class="section"><p>' + repo.description + '</p></div>' +
