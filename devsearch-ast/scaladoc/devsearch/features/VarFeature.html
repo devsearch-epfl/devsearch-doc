@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Feature - devsearch.features.Feature</title>
-          <meta name="description" content="Feature - devsearch.features.Feature" />
-          <meta name="keywords" content="Feature devsearch.features.Feature" />
+          <title>VarFeature - devsearch.features.VarFeature</title>
+          <meta name="description" content="VarFeature - devsearch.features.VarFeature" />
+          <meta name="keywords" content="VarFeature devsearch.features.VarFeature" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'devsearch.features.Feature';
+            var hash = 'devsearch.features.VarFeature';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,34 +24,24 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="Feature$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <img src="../../lib/class_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="devsearch">devsearch</a>.<a href="package.html" class="extype" name="devsearch.features">features</a></p>
-        <h1><a href="Feature$.html" title="Go to companion">Feature</a></h1>
+        <h1>VarFeature</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Feature</span><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+        <span class="name">VarFeature</span><span class="params">(<span name="position">position: <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">CodePiecePosition</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base feature class</p><p>All features we're going to extract from the ASTs must inherit from this base class. The interface
-guarantees the presence of a <code>pos: CodeFilePosition</code> field that is used to reference the feature
-source during index lookup. We also require a <code>key: String</code> field that is used to actually index
-upon. This field must identify the feature type in the sense that equality between two features
-is iff keys are identical.</p><p>We also provide an <a href="#encode:String" class="extmbr" name="devsearch.features.Feature#encode">encode</a> method that transforms this feature into a CSV line of the format
-<code>key, location, line</code> where each field is encoded with the URI scheme to make sure we can split
-on '\n' and ',' during index parsing.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="AbstractFunFeature.html" class="extype" name="devsearch.features.AbstractFunFeature">AbstractFunFeature</a>, <a href="ArgNameFeature.html" class="extype" name="devsearch.features.ArgNameFeature">ArgNameFeature</a>, <a href="ClassNameFeature.html" class="extype" name="devsearch.features.ClassNameFeature">ClassNameFeature</a>, <a href="ControlFeature.html" class="extype" name="devsearch.features.ControlFeature">ControlFeature</a>, <a href="FieldFeature.html" class="extype" name="devsearch.features.FieldFeature">FieldFeature</a>, <a href="FlatMapCallFeature.html" class="extype" name="devsearch.features.FlatMapCallFeature">FlatMapCallFeature</a>, <a href="FunNameFeature.html" class="extype" name="devsearch.features.FunNameFeature">FunNameFeature</a>, <a href="FunctionFieldFeature.html" class="extype" name="devsearch.features.FunctionFieldFeature">FunctionFieldFeature</a>, <a href="ImportFeature.html" class="extype" name="devsearch.features.ImportFeature">ImportFeature</a>, <a href="InheritanceFeature.html" class="extype" name="devsearch.features.InheritanceFeature">InheritanceFeature</a>, <a href="MapCallFeature.html" class="extype" name="devsearch.features.MapCallFeature">MapCallFeature</a>, <a href="OverridingFunFeature.html" class="extype" name="devsearch.features.OverridingFunFeature">OverridingFunFeature</a>, <a href="ParametricFunFeature.html" class="extype" name="devsearch.features.ParametricFunFeature">ParametricFunFeature</a>, <a href="ThrowsFeature.html" class="extype" name="devsearch.features.ThrowsFeature">ThrowsFeature</a>, <a href="TypeRefFeature.html" class="extype" name="devsearch.features.TypeRefFeature">TypeRefFeature</a>, <a href="TypedVarFeature.html" class="extype" name="devsearch.features.TypedVarFeature">TypedVarFeature</a>, <a href="VarFeature.html" class="extype" name="devsearch.features.VarFeature">VarFeature</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -69,7 +59,7 @@ on '\n' and ',' during index parsing.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="devsearch.features.Feature"><span>Feature</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="devsearch.features.VarFeature"><span>VarFeature</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="devsearch.features.Feature"><span>Feature</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,16 +79,16 @@ on '\n' and ',' during index parsing.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="devsearch.features.Feature#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(pos:devsearch.features.CodePiecePosition):devsearch.features.Feature"></a>
-      <a id="&lt;init&gt;:Feature"></a>
+              <ol><li name="devsearch.features.VarFeature#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(position:devsearch.features.CodePiecePosition,name:String):devsearch.features.VarFeature"></a>
+      <a id="&lt;init&gt;:VarFeature"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Feature</span><span class="params">(<span name="pos">pos: <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">CodePiecePosition</a></span>)</span>
+        <span class="name">VarFeature</span><span class="params">(<span name="position">position: <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">CodePiecePosition</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
       </h4>
       
@@ -107,26 +97,10 @@ on '\n' and ',' during index parsing.
 
         
 
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="devsearch.features.Feature#key" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="key:String"></a>
-      <a id="key:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">key</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -240,7 +214,7 @@ on '\n' and ',' during index parsing.
 a CSV parser.</p><div class="fullcomment"><div class="comment cmt"><p>Encodes the current feature into something that can easily be dealt with by
 a CSV parser. We use the URI encoding scheme to make sure the resulting string
 contains no commas (outside of the ones we want to split upon) and no line feeds.
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -266,7 +240,7 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
         <span class="name">equals</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="devsearch.features.Feature">Feature</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -311,7 +285,7 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="devsearch.features.Feature">Feature</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -325,6 +299,32 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="devsearch.features.VarFeature#key" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="key:String"></a>
+      <a id="key:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">key</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="devsearch.features.VarFeature">VarFeature</a> → <a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a></dd></dl></div>
+    </li><li name="devsearch.features.VarFeature#name" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -364,7 +364,7 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="devsearch.features.Feature#pos" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="devsearch.features.Feature#pos" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pos:devsearch.features.CodePiecePosition"></a>
       <a id="pos:CodePiecePosition"></a>
       <h4 class="signature">
@@ -374,6 +374,19 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
       </span>
       <span class="symbol">
         <span class="name">pos</span><span class="result">: <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">CodePiecePosition</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a></dd></dl></div>
+    </li><li name="devsearch.features.VarFeature#position" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="position:devsearch.features.CodePiecePosition"></a>
+      <a id="position:CodePiecePosition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">position</span><span class="result">: <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">CodePiecePosition</a></span>
       </span>
       </h4>
       
@@ -390,19 +403,6 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -469,7 +469,15 @@ contains no commas (outside of the ones we want to split upon) and no line feeds
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="java.io.Serializable">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="devsearch.features.Feature">
+              <h3>Inherited from <a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
