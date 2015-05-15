@@ -241,15 +241,15 @@
               
         </dd></dl></div>
     </li><li name="services.SearchService#get" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="get(query:String,maxDuration:scala.concurrent.duration.FiniteDuration):(Option[String],List[String],scala.concurrent.Future[devsearch.lookup.SearchResult])"></a>
-      <a id="get(String,FiniteDuration):(Option[String],List[String],Future[SearchResult])"></a>
+      <a id="get(request:devsearch.lookup.SearchRequest,maxDuration:scala.concurrent.duration.FiniteDuration):scala.concurrent.Future[(devsearch.lookup.SearchResult,scala.concurrent.duration.Duration)]"></a>
+      <a id="get(SearchRequest,FiniteDuration):Future[(SearchResult,Duration)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="query">query: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="maxDuration">maxDuration: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span></span>)</span><span class="result">: (<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="devsearch.lookup.SearchResult">SearchResult</span>])</span>
+        <span class="name">get</span><span class="params">(<span name="request">request: <span class="extype" name="devsearch.lookup.SearchRequest">SearchRequest</span></span>, <span name="maxDuration">maxDuration: <span class="extype" name="scala.concurrent.duration.FiniteDuration">FiniteDuration</span> = <span class="symbol">10 seconds</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[(<span class="extype" name="devsearch.lookup.SearchResult">SearchResult</span>, <span class="extype" name="scala.concurrent.duration.Duration">Duration</span>)]</span>
       </span>
       </h4>
       

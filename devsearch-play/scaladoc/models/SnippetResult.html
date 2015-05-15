@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>SnippetFetcher - services.SnippetFetcher</title>
-          <meta name="description" content="SnippetFetcher - services.SnippetFetcher" />
-          <meta name="keywords" content="SnippetFetcher services.SnippetFetcher" />
+          <title>SnippetResult - models.SnippetResult</title>
+          <meta name="description" content="SnippetResult - models.SnippetResult" />
+          <meta name="keywords" content="SnippetResult models.SnippetResult" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../index.html';
-            var hash = 'services.SnippetFetcher$';
+            var hash = 'models.SnippetResult';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -22,27 +22,27 @@
    	  </script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <img src="../lib/object_big.png" />
-        <p id="owner"><a href="package.html" class="extype" name="services">services</a></p>
-        <h1>SnippetFetcher</h1>
+        <img src="../lib/class_big.png" />
+        <p id="owner"><a href="package.html" class="extype" name="models">models</a></p>
+        <h1>SnippetResult</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">SnippetFetcher</span>
+        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by dengels on 21/04/15.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by dengels on 07/05/15.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -60,7 +60,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="services.SnippetFetcher"><span>SnippetFetcher</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="models.SnippetResult"><span>SnippetResult</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -78,7 +78,23 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="models.SnippetResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(user:String,repo:String,path:String,startLine:Int,endLine:Int,scoreBreakDown:Map[String,Double],featureList:Set[String],code:Option[String]):models.SnippetResult"></a>
+      <a id="&lt;init&gt;:SnippetResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -183,16 +199,29 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="services.SnippetFetcher#encodeGithubPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="encodeGithubPath(path:String):String"></a>
-      <a id="encodeGithubPath(String):String"></a>
+    </li><li name="models.SnippetResult#code" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="code:Option[String]"></a>
+      <a id="code:Option[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">encodeGithubPath</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">code</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#endLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="endLine:Int"></a>
+      <a id="endLine:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">endLine</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       
@@ -209,19 +238,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
+    </li><li name="models.SnippetResult#featureList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="featureList:Set[String]"></a>
+      <a id="featureList:Set[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">featureList</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -254,32 +283,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="services.SnippetFetcher#getSnippetCode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSnippetCode(entry:devsearch.lookup.SearchResultEntry):scala.concurrent.Future[models.SnippetResult]"></a>
-      <a id="getSnippetCode(SearchResultEntry):Future[SnippetResult]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSnippetCode</span><span class="params">(<span name="entry">entry: <span class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<a href="../models/SnippetResult.html" class="extype" name="models.SnippetResult">SnippetResult</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -293,6 +296,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="models.SnippetResult#language" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="language:Option[String]"></a>
+      <a id="language:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">language</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -332,6 +348,84 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="models.SnippetResult#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="path:String"></a>
+      <a id="path:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">path</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#previewUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="previewUrl:String"></a>
+      <a id="previewUrl:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">previewUrl</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#repo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="repo:String"></a>
+      <a id="repo:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repo</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#repoUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="repoUrl:String"></a>
+      <a id="repoUrl:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repoUrl</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#scoreBreakDown" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scoreBreakDown:Map[String,Double]"></a>
+      <a id="scoreBreakDown:Map[String,Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scoreBreakDown</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="models.SnippetResult#startLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="startLine:Int"></a>
+      <a id="startLine:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startLine</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -345,19 +439,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+    </li><li name="models.SnippetResult#truncadedPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="truncadedPath:String"></a>
+      <a id="truncadedPath:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">truncadedPath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      
+    </li><li name="models.SnippetResult#user" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="user:String"></a>
+      <a id="user:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">user</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -424,7 +531,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
