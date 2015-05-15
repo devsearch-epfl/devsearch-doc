@@ -186,7 +186,7 @@ This actor manages a partition node of the cluster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SearchRequest.html"><span class="name">SearchRequest</span></a><span class="params">(<span name="features">features: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SearchRequest.html"><span class="name">SearchRequest</span></a><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -212,7 +212,7 @@ This actor manages a partition node of the cluster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SearchResultEntry.html"><span class="name">SearchResultEntry</span></a><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>, <span name="score">score: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SearchResultEntry.html"><span class="name">SearchResultEntry</span></a><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="lineStart">lineStart: <span class="extype" name="scala.Int">Int</span></span>, <span name="lineEnd">lineEnd: <span class="extype" name="scala.Int">Int</span></span>, <span name="score">score: <span class="extype" name="scala.Float">Float</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -238,7 +238,7 @@ This actor manages a partition node of the cluster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SearchResultSuccess.html"><span class="name">SearchResultSuccess</span></a><span class="params">(<span name="entries">entries: <span class="extype" name="scala.Seq">Seq</span>[<a href="SearchResultEntry.html" class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</a>]</span>)</span><span class="result"> extends <a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SearchResultSuccess.html"><span class="name">SearchResultSuccess</span></a><span class="params">(<span name="entries">entries: <span class="extype" name="scala.Seq">Seq</span>[<a href="SearchResultEntry.html" class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</a>]</span>, <span name="count">count: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -290,20 +290,6 @@ knowing the number of clusters before-hand.</p>
       </span>
       </h4>
       
-    </li><li name="devsearch.lookup.FindNBestOld" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FindNBestOld"></a>
-      <a id="FindNBestOld:FindNBestOld"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="FindNBestOld$.html"><span class="name">FindNBestOld</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">QuickSelect algorithm
-http://en.</p>
     </li><li name="devsearch.lookup.Main" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Main"></a>
       <a id="Main:Main"></a>

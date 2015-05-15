@@ -255,15 +255,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="devsearch.lookup.FeatureDB#getMatchesFromDb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMatchesFromDb(features:Seq[String]):scala.concurrent.Future[Stream[devsearch.lookup.DocumentHits]]"></a>
-      <a id="getMatchesFromDb(Seq[String]):Future[Stream[DocumentHits]]"></a>
+      <a id="getMatchesFromDb(features:Set[String],langFilter:Set[String]):scala.concurrent.Future[Stream[devsearch.lookup.DocumentHits]]"></a>
+      <a id="getMatchesFromDb(Set[String],Set[String]):Future[Stream[DocumentHits]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMatchesFromDb</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Stream">Stream</span>[<a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a>]]</span>
+        <span class="name">getMatchesFromDb</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="langFilter">langFilter: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Stream">Stream</span>[<a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">fetches matches from the DB</p><div class="fullcomment"><div class="comment cmt"><p>fetches matches from the DB</p></div><dl class="paramcmts block"><dt class="param">features</dt><dd class="cmt"><p>a list of feature index</p></dd><dt>returns</dt><dd class="cmt"><p>A stream of (&quot;owner/repo/path/to/file&quot;, List((featureIndex, lineNb)))

@@ -82,7 +82,7 @@ results and to send it back to the requestor (Play app).
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="devsearch.lookup.LookupMerger#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(requestor:akka.actor.ActorRef,maxPartitions:Int):devsearch.lookup.LookupMerger"></a>
+      <a id="&lt;init&gt;(requestor:akka.actor.ActorRef,nPartitions:Int):devsearch.lookup.LookupMerger"></a>
       <a id="&lt;init&gt;:LookupMerger"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,7 +90,7 @@ results and to send it back to the requestor (Play app).
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LookupMerger</span><span class="params">(<span name="requestor">requestor: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>, <span name="maxPartitions">maxPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">LookupMerger</span><span class="params">(<span name="requestor">requestor: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>, <span name="nPartitions">nPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4>
       
@@ -294,19 +294,6 @@ results and to send it back to the requestor (Play app).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li name="devsearch.lookup.LookupMerger#endLookup" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="endLookup:Unit"></a>
-      <a id="endLookup:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">endLookup</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -404,29 +391,42 @@ results and to send it back to the requestor (Play app).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorLogging</dd></dl></div>
-    </li><li name="devsearch.lookup.LookupMerger#maxPartitions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="maxPartitions:Int"></a>
-      <a id="maxPartitions:Int"></a>
+    </li><li name="devsearch.lookup.LookupMerger#mergeAndReply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mergeAndReply:Unit"></a>
+      <a id="mergeAndReply:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mergeAndReply</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.LookupMerger#nPartitions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nPartitions:Int"></a>
+      <a id="nPartitions:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">maxPartitions</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">nPartitions</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       
-    </li><li name="devsearch.lookup.LookupMerger#nbResults" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="nbResults:Int"></a>
-      <a id="nbResults:Int"></a>
+    </li><li name="devsearch.lookup.LookupMerger#nResponses" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nResponses:Int"></a>
+      <a id="nResponses:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">nbResults</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">nResponses</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       
@@ -649,6 +649,19 @@ results and to send it back to the requestor (Play app).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="devsearch.lookup.LookupMerger#totalCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="totalCount:Long"></a>
+      <a id="totalCount:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalCount</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      
     </li><li name="akka.actor.Actor#unhandled" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unhandled(message:Any):Unit"></a>
       <a id="unhandled(Any):Unit"></a>

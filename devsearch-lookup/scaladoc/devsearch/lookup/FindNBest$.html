@@ -151,15 +151,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="devsearch.lookup.FindNBest#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[Entry](stream:Stream[Entry],cmp:Entry=&gt;Float,n:Int):List[Entry]"></a>
-      <a id="apply[Entry](Stream[Entry],(Entry)⇒Float,Int):List[Entry]"></a>
+      <a id="apply[Entry](stream:Stream[Entry],scoreFunc:Entry=&gt;Float,n:Int):(List[Entry],Long)"></a>
+      <a id="apply[Entry](Stream[Entry],(Entry)⇒Float,Int):(List[Entry],Long)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="stream">stream: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>]</span>, <span name="cmp">cmp: (<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="stream">stream: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>]</span>, <span name="scoreFunc">scoreFunc: (<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.apply.Entry">Entry</span>], <span class="extype" name="scala.Long">Long</span>)</span>
       </span>
       </h4>
       
@@ -196,7 +196,7 @@
               
         </dd></dl></div>
     </li><li name="devsearch.lookup.FindNBest#dropSmallestV1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dropSmallestV1[Entry](list:List[Entry],cmp:Entry=&gt;Float):List[Entry]"></a>
+      <a id="dropSmallestV1[Entry](list:List[Entry],scoreFunc:Entry=&gt;Float):List[Entry]"></a>
       <a id="dropSmallestV1[Entry](List[Entry],(Entry)⇒Float):List[Entry]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -204,12 +204,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dropSmallestV1</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>]</span>, <span name="cmp">cmp: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>]</span>
+        <span class="name">dropSmallestV1</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>]</span>, <span name="scoreFunc">scoreFunc: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV1.Entry">Entry</span>]</span>
       </span>
       </h4>
       
     </li><li name="devsearch.lookup.FindNBest#dropSmallestV2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dropSmallestV2[Entry](list:List[Entry],cmp:Entry=&gt;Float):List[Entry]"></a>
+      <a id="dropSmallestV2[Entry](list:List[Entry],scoreFunc:Entry=&gt;Float):List[Entry]"></a>
       <a id="dropSmallestV2[Entry](List[Entry],(Entry)⇒Float):List[Entry]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -217,12 +217,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dropSmallestV2</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>]</span>, <span name="cmp">cmp: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>]</span>
+        <span class="name">dropSmallestV2</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>]</span>, <span name="scoreFunc">scoreFunc: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV2.Entry">Entry</span>]</span>
       </span>
       </h4>
       
     </li><li name="devsearch.lookup.FindNBest#dropSmallestV3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dropSmallestV3[Entry](list:List[Entry],cmp:Entry=&gt;Float):List[Entry]"></a>
+      <a id="dropSmallestV3[Entry](list:List[Entry],scoreFunc:Entry=&gt;Float):List[Entry]"></a>
       <a id="dropSmallestV3[Entry](List[Entry],(Entry)⇒Float):List[Entry]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -230,7 +230,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dropSmallestV3</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>]</span>, <span name="cmp">cmp: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>]</span>
+        <span class="name">dropSmallestV3</span><span class="tparams">[<span name="Entry">Entry</span>]</span><span class="params">(<span name="list">list: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>]</span>, <span name="scoreFunc">scoreFunc: (<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>) ⇒ <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="devsearch.lookup.FindNBest.dropSmallestV3.Entry">Entry</span>]</span>
       </span>
       </h4>
       

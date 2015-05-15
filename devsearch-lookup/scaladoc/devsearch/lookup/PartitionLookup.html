@@ -366,28 +366,28 @@ receives requests and returns the K best matches of the partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="devsearch.lookup.PartitionLookup#getFeaturesAndScores" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFeaturesAndScores(features:Seq[String]):scala.concurrent.Future[devsearch.lookup.SearchResult]"></a>
-      <a id="getFeaturesAndScores(Seq[String]):Future[SearchResult]"></a>
+      <a id="getFeaturesAndScores(features:Set[String],lang:Set[String]):scala.concurrent.Future[devsearch.lookup.SearchResult]"></a>
+      <a id="getFeaturesAndScores(Set[String],Set[String]):Future[SearchResult]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getFeaturesAndScores</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a>]</span>
+        <span class="name">getFeaturesAndScores</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<a href="SearchResult.html" class="extype" name="devsearch.lookup.SearchResult">SearchResult</a>]</span>
       </span>
       </h4>
       
     </li><li name="devsearch.lookup.PartitionLookup#getScores" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getScores(entry:devsearch.lookup.DocumentHits):Iterable[devsearch.lookup.SearchResultEntry]"></a>
-      <a id="getScores(DocumentHits):Iterable[SearchResultEntry]"></a>
+      <a id="getScores(entry:devsearch.lookup.DocumentHits,nbQueryFeatures:Int):Iterable[devsearch.lookup.SearchResultEntry]"></a>
+      <a id="getScores(DocumentHits,Int):Iterable[SearchResultEntry]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getScores</span><span class="params">(<span name="entry">entry: <a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="SearchResultEntry.html" class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</a>]</span>
+        <span class="name">getScores</span><span class="params">(<span name="entry">entry: <a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a></span>, <span name="nbQueryFeatures">nbQueryFeatures: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="SearchResultEntry.html" class="extype" name="devsearch.lookup.SearchResultEntry">SearchResultEntry</a>]</span>
       </span>
       </h4>
       
