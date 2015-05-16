@@ -317,6 +317,24 @@ distribute them to the Workers.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="devsearch.concat.actors.Coordinator#collectWorkers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="collectWorkers(numLeft:Int,bytesSeen:Long,bytesProcessed:Long):PartialFunction[Any,Unit]"></a>
+      <a id="collectWorkers(Int,Long,Long):PartialFunction[Any,Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">collectWorkers</span><span class="params">(<span name="numLeft">numLeft: <span class="extype" name="scala.Int">Int</span></span>, <span name="bytesSeen">bytesSeen: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>, <span name="bytesProcessed">bytesProcessed: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>)</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.Coordinator@collectWorkers(numLeft:Int,bytesSeen:Long,bytesProcessed:Long):PartialFunction[Any,Unit]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The coordinator will wait for all the workers to join before exiting
+</p>
     </li><li name="akka.actor.Actor#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="context:akka.actor.ActorContext"></a>
       <a id="context:ActorContext"></a>
@@ -334,23 +352,6 @@ distribute them to the Workers.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li name="devsearch.concat.actors.Coordinator#currentBlobNum" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="currentBlobNum:Int"></a>
-      <a id="currentBlobNum:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">currentBlobNum</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#devsearch.concat.actors.Coordinator@currentBlobNum:Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -636,7 +637,9 @@ distribute them to the Workers.
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="devsearch.concat.actors.Coordinator">Coordinator</a> → Actor</dd></dl></div>
+      <p class="shortcomment cmt">Default behaviour of coordiantor on startup
+</p><div class="fullcomment"><div class="comment cmt"><p>Default behaviour of coordiantor on startup
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="devsearch.concat.actors.Coordinator">Coordinator</a> → Actor</dd></dl></div>
     </li><li name="devsearch.concat.actors.Coordinator#repoRoot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="repoRoot:java.nio.file.Path"></a>
       <a id="repoRoot:Path"></a>
@@ -654,23 +657,6 @@ distribute them to the Workers.
       </a>
     </span>
       <p class="shortcomment cmt">The input folder where to find source files</p>
-    </li><li name="devsearch.concat.actors.Coordinator#repos" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="repos:Stream[java.nio.file.Path]"></a>
-      <a id="repos:Stream[Path]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">repos</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="java.nio.file.Path">Path</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#devsearch.concat.actors.Coordinator@repos:Stream[java.nio.file.Path]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">The repos we have to process</p>
     </li><li name="akka.actor.Actor#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:akka.actor.ActorRef"></a>
       <a id="self:ActorRef"></a>
@@ -705,6 +691,24 @@ distribute them to the Workers.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="devsearch.concat.actors.Coordinator#serverWorkers" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="serverWorkers(currentBlobNum:Int,repos:Stream[java.nio.file.Path]):PartialFunction[Any,Unit]"></a>
+      <a id="serverWorkers(Int,Stream[Path]):PartialFunction[Any,Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serverWorkers</span><span class="params">(<span name="currentBlobNum">currentBlobNum: <span class="extype" name="scala.Int">Int</span></span>, <span name="repos">repos: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="java.nio.file.Path">Path</span>]</span>)</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.Coordinator@serverWorkers(currentBlobNum:Int,repos:Stream[java.nio.file.Path]):PartialFunction[Any,Unit]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Serve the workers with repositories or blob numbers</p><div class="fullcomment"><div class="comment cmt"><p>Serve the workers with repositories or blob numbers</p></div><dl class="paramcmts block"><dt class="param">currentBlobNum</dt><dd class="cmt"><p>the number of the last blob that has been given out to a worker</p></dd><dt class="param">repos</dt><dd class="cmt"><p>all the repos that haven't been processed yet
+</p></dd></dl></div>
     </li><li name="akka.actor.Actor#supervisorStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisorStrategy:akka.actor.SupervisorStrategy"></a>
       <a id="supervisorStrategy:SupervisorStrategy"></a>
@@ -739,40 +743,6 @@ distribute them to the Workers.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="devsearch.concat.actors.Coordinator#totalBytesProcesses" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalBytesProcesses:Long"></a>
-      <a id="totalBytesProcesses:Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">totalBytesProcesses</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#devsearch.concat.actors.Coordinator@totalBytesProcesses:Long" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Total number of bytes that were added to the blobs</p>
-    </li><li name="devsearch.concat.actors.Coordinator#totalBytesSeen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalBytesSeen:Long"></a>
-      <a id="totalBytesSeen:Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">totalBytesSeen</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#devsearch.concat.actors.Coordinator@totalBytesSeen:Long" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Total number of bytes in the root folder</p>
     </li><li name="akka.actor.Actor#unhandled" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unhandled(message:Any):Unit"></a>
       <a id="unhandled(Any):Unit"></a>
@@ -859,23 +829,6 @@ distribute them to the Workers.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="devsearch.concat.actors.Coordinator#workerFinished" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="workerFinished:Int"></a>
-      <a id="workerFinished:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">workerFinished</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#devsearch.concat.actors.Coordinator@workerFinished:Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Number of workers that have finished working</p>
     </li></ol>
             </div>
 
