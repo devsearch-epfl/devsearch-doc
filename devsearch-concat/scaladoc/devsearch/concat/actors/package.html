@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>actors - devsearch.concat.actors</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="devsearch">devsearch</a>.<a href="../package.html" class="extype" name="devsearch.concat">concat</a></p>
-        <h1>actors</h1>
+        <h1>actors</h1><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -58,7 +66,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="devsearch.concat.actors.Coordinator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="devsearch.concat.actors.Coordinator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="CoordinatorextendsActorwithActorLoggingwithProductwithSerializable"></a>
       <a id="Coordinator:Coordinator"></a>
       <h4 class="signature">
@@ -69,9 +77,16 @@
       <span class="symbol">
         <a href="Coordinator.html"><span class="name">Coordinator</span></a><span class="params">(<span name="repoRoot">repoRoot: <span class="extype" name="java.nio.file.Path">Path</span></span>, <span name="outputFolder">outputFolder: <span class="extype" name="java.nio.file.Path">Path</span></span>, <span name="numWorkers">numWorkers: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">The coordinator is in charge of listing the files in the input directory and
-distribute them to the Workers.</p>
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.package@CoordinatorextendsActorwithActorLoggingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The coordinator is in charge of listing the files in the input directory and
+distribute them to the Workers.</p><div class="fullcomment"><div class="comment cmt"><p>The coordinator is in charge of listing the files in the input directory and
+distribute them to the Workers.
+</p></div><dl class="paramcmts block"><dt class="param">repoRoot</dt><dd class="cmt"><p>The input folder where to find source files</p></dd><dt class="param">outputFolder</dt><dd class="cmt"><p>The output folder where to output the big blobs</p></dd><dt class="param">numWorkers</dt><dd class="cmt"><p>The number of workers that it will have to coordinate
+</p></dd></dl></div>
     </li><li name="devsearch.concat.actors.Worker" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WorkerextendsActorwithActorLogging"></a>
       <a id="Worker:Worker"></a>
@@ -83,8 +98,12 @@ distribute them to the Workers.</p>
       <span class="symbol">
         <a href="Worker.html"><span class="name">Worker</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">The worker actor is the one in charge of creating the large
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.package@WorkerextendsActorwithActorLogging" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The worker actor is the one in charge of creating the large
 files from smaller ones.</p>
     </li></ol>
             </div>
@@ -104,7 +123,11 @@ files from smaller ones.</p>
       <span class="symbol">
         <a href="Coordinator$.html"><span class="name">Coordinator</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.package@Coordinator" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="devsearch.concat.actors.Worker" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Worker"></a>
@@ -117,7 +140,11 @@ files from smaller ones.</p>
       <span class="symbol">
         <a href="Worker$.html"><span class="name">Worker</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../index.html#devsearch.concat.actors.package@Worker" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -144,6 +171,7 @@ files from smaller ones.</p>
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
+
+
     </body>
       </html>
