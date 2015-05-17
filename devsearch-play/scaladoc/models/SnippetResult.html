@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -81,7 +81,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="models.SnippetResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(user:String,repo:String,path:String,startLine:Int,endLine:Int,scoreBreakDown:Map[String,Double],featureList:Set[String],code:Option[String]):models.SnippetResult"></a>
+      <a id="&lt;init&gt;(user:String,repo:String,path:String,startLine:Int,endLine:Int,scoreBreakDown:Map[String,Double],featureList:Set[devsearch.features.Feature],code:Option[String]):models.SnippetResult"></a>
       <a id="&lt;init&gt;:SnippetResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -89,7 +89,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">SnippetResult</span><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repo">repo: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="startLine">startLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="endLine">endLine: <span class="extype" name="scala.Int">Int</span></span>, <span name="scoreBreakDown">scoreBreakDown: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="featureList">featureList: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>, <span name="code">code: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       </h4>
       
@@ -265,15 +265,15 @@
       </h4>
       
     </li><li name="models.SnippetResult#featureList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="featureList:Set[String]"></a>
-      <a id="featureList:Set[String]"></a>
+      <a id="featureList:Set[devsearch.features.Feature]"></a>
+      <a id="featureList:Set[Feature]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">featureList</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">featureList</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>
       </span>
       </h4>
       
