@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">SearchRequest</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">SearchRequest</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="len">len: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="devsearch.lookup.SearchRequest#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(features:Set[String],lang:Set[String]):devsearch.lookup.SearchRequest"></a>
+      <a id="&lt;init&gt;(features:Set[devsearch.features.Feature],lang:Set[String],start:Int,len:Int):devsearch.lookup.SearchRequest"></a>
       <a id="&lt;init&gt;:SearchRequest"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SearchRequest</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">SearchRequest</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>, <span name="lang">lang: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="len">len: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4>
       
@@ -212,15 +212,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="devsearch.lookup.SearchRequest#features" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="features:Set[String]"></a>
-      <a id="features:Set[String]"></a>
+      <a id="features:Set[devsearch.features.Feature]"></a>
+      <a id="features:Set[Feature]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">features</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">features</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="devsearch.features.Feature">Feature</span>]</span>
       </span>
       </h4>
       
@@ -282,6 +282,19 @@
       </span>
       </h4>
       
+    </li><li name="devsearch.lookup.SearchRequest#len" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="len:Int"></a>
+      <a id="len:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">len</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -321,6 +334,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="devsearch.lookup.SearchRequest#start" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="start:Int"></a>
+      <a id="start:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

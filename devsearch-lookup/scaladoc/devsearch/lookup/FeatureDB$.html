@@ -164,6 +164,45 @@
       </span>
       </h4>
       
+    </li><li name="devsearch.lookup.FeatureDB#GLOBAL_OCCURENCES_COLLECTION_NAME" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GLOBAL_OCCURENCES_COLLECTION_NAME:String"></a>
+      <a id="GLOBAL_OCCURENCES_COLLECTION_NAME:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GLOBAL_OCCURENCES_COLLECTION_NAME</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.FeatureDB#LOCAL_OCCURENCES_COLLECTION_NAME" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LOCAL_OCCURENCES_COLLECTION_NAME:String"></a>
+      <a id="LOCAL_OCCURENCES_COLLECTION_NAME:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LOCAL_OCCURENCES_COLLECTION_NAME</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.lookup.FeatureDB#STAGE_2_LIMIT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="STAGE_2_LIMIT:Int"></a>
+      <a id="STAGE_2_LIMIT:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">STAGE_2_LIMIT</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -254,19 +293,33 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="devsearch.lookup.FeatureDB#getMatchesFromDb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMatchesFromDb(features:Set[String],langFilter:Set[String]):scala.concurrent.Future[Stream[devsearch.lookup.DocumentHits]]"></a>
-      <a id="getMatchesFromDb(Set[String],Set[String]):Future[Stream[DocumentHits]]"></a>
+    </li><li name="devsearch.lookup.FeatureDB#getFeatureOccurrenceCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getFeatureOccurrenceCount(collection:String,features:Set[String],languages:Set[String]):scala.concurrent.Future[Map[(String,String),Long]]"></a>
+      <a id="getFeatureOccurrenceCount(String,Set[String],Set[String]):Future[Map[(String,String),Long]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMatchesFromDb</span><span class="params">(<span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="langFilter">langFilter: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Stream">Stream</span>[<a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a>]]</span>
+        <span class="name">getFeatureOccurrenceCount</span><span class="params">(<span name="collection">collection: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="features">features: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="languages">languages: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Predef.Map">Map</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>), <span class="extype" name="scala.Long">Long</span>]]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">fetches matches from the DB</p><div class="fullcomment"><div class="comment cmt"><p>fetches matches from the DB</p></div><dl class="paramcmts block"><dt class="param">features</dt><dd class="cmt"><p>a list of feature index</p></dd><dt>returns</dt><dd class="cmt"><p>A stream of (&quot;owner/repo/path/to/file&quot;, List((featureIndex, lineNb)))
+      <p class="shortcomment cmt">fetches number of occurrences from DB</p><div class="fullcomment"><div class="comment cmt"><p>fetches number of occurrences from DB</p></div><dl class="paramcmts block"><dt class="param">collection</dt><dd class="cmt"><p>name of collection to lookup</p></dd><dt class="param">features</dt><dd class="cmt"><p>set of features to get counts for</p></dd><dt class="param">languages</dt><dd class="cmt"><p>set of languages to get counts for (empty means all languages)</p></dd><dt>returns</dt><dd class="cmt"><p>A map from (feature, language) pair to number of occurrences
+</p></dd></dl></div>
+    </li><li name="devsearch.lookup.FeatureDB#getMatchesFromDb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMatchesFromDb(rareFeatures:Set[String],commonFeatures:Set[String],langFilter:Set[String]):scala.concurrent.Future[Stream[devsearch.lookup.DocumentHits]]"></a>
+      <a id="getMatchesFromDb(Set[String],Set[String],Set[String]):Future[Stream[DocumentHits]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMatchesFromDb</span><span class="params">(<span name="rareFeatures">rareFeatures: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="commonFeatures">commonFeatures: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="langFilter">langFilter: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Stream">Stream</span>[<a href="DocumentHits.html" class="extype" name="devsearch.lookup.DocumentHits">DocumentHits</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">fetches matches from the DB</p><div class="fullcomment"><div class="comment cmt"><p>fetches matches from the DB</p></div><dl class="paramcmts block"><dt class="param">rareFeatures</dt><dd class="cmt"><p>a set of rare features to select by (union), nonempty</p></dd><dt class="param">commonFeatures</dt><dd class="cmt"><p>a set of common features to filter by, may be empty</p></dd><dt class="param">langFilter</dt><dd class="cmt"><p>a set of languages which should be included (empty means all languages)</p></dd><dt>returns</dt><dd class="cmt"><p>A stream of (&quot;owner/repo/path/to/file&quot;, List((featureIndex, lineNb)))
 </p></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
