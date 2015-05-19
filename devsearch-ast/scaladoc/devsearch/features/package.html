@@ -44,11 +44,11 @@ other, we provide feature extractors that enable indexed lookup of code. The fea
 interface is extremely flexible and each code feature is fully determined by a string
 key (unique among all features) and a position in a code file (see <a href="Feature.html" class="extype" name="devsearch.features.Feature">features.Feature</a>).</p><p>To facilitate feature extraction for a given <a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">features.CodeFile</a>, we provide the
 <a href="FeatureRecognizer$.html" class="extype" name="devsearch.features.FeatureRecognizer">features.FeatureRecognizer</a> object in order to extracts all features from a given code file.</p><p>Also, when the source language is unknown, one can use the <a href="QueryRecognizer$.html" class="extype" name="devsearch.features.QueryRecognizer">features.QueryRecognizer</a>
-object to extract a code file from a language-agnostic source snippet.</p><p>For a brief overview, one can look at:</p><p>- <a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">features.CodeFile</a>, <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">features.CodeFileLocation</a> and <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">features.CodePiecePosition</a> for
-feature extractor inputs and feature positioning</p><p>- <a href="Feature.html" class="extype" name="devsearch.features.Feature">features.Feature</a> and <a href="FeatureExtractor.html" class="extype" name="devsearch.features.FeatureExtractor">features.FeatureExtractor</a> for new feature definition (don't
-forget to extend the <a href="FeatureRecognizer$.html#extractors:scala.collection.immutable.Set[devsearch.features.FeatureExtractor]" class="extmbr" name="devsearch.features.FeatureRecognizer#extractors">features.FeatureRecognizer.extractors</a> list with your new feature
-extractor)
-</p></div><div class="toggleContainer block">
+object to extract a code file from a language-agnostic source snippet.</p><p>For a brief overview, one can look at:</p><ul><li><a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">features.CodeFile</a>, <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">features.CodeFileLocation</a> and <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">features.CodePiecePosition</a> for
+   feature extractor inputs and feature positioning</li><li><a href="Feature.html" class="extype" name="devsearch.features.Feature">features.Feature</a> and <a href="FeatureExtractor.html" class="extype" name="devsearch.features.FeatureExtractor">features.FeatureExtractor</a> for new feature definition (don't
+   forget to extend the <a href="FeatureRecognizer$.html#extractors:scala.collection.immutable.Set[devsearch.features.FeatureExtractor]" class="extmbr" name="devsearch.features.FeatureRecognizer#extractors">features.FeatureRecognizer.extractors</a> list with your new feature
+   extractor)
+</li></ul></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>

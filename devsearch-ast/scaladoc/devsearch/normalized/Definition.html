@@ -43,14 +43,14 @@
 code definition (like classes, objects, functions, etc.) is wrapped into
 a <code>Definition</code> and points to the next <code>Definition</code> instances that are
 defined inside itself.</p><p>For example, the Scala code</p><pre><span class="kw">class</span> A {
-<span class="kw">def</span> f: <span class="std">Int</span> = ...
+<span class="kw">def</span> f: <span class="std">Int</span> = ???
 <span class="kw">def</span> test(i: <span class="std">Int</span>): <span class="std">Boolean</span> = {
-  <span class="kw">def</span> rec(a: <span class="std">Int</span>): <span class="std">Int</span> = ...
-  ...
+  <span class="kw">def</span> rec(a: <span class="std">Int</span>): <span class="std">Int</span> = ???
+  rec(i)
 }
-}</pre><p>gives rise to the definition tree:</p><pre>A
+}</pre><p>gives rise to the definition tree:</p><pre>- A -
  / \
-f  test
+f test
     |
    rec</pre><p>Definitions that have associated behavior (i.e. functions) are defined
 as <a href="CodeDefinition.html" class="extype" name="devsearch.normalized.CodeDefinition">CodeDefinition</a> instances.
@@ -113,7 +113,7 @@ as <a href="CodeDefinition.html" class="extype" name="devsearch.normalized.CodeD
         <span class="name">definitions</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="" class="extype" name="devsearch.normalized.Definition">Definition</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Structural sub-definitions in the definition tree</p>
     </li><li name="devsearch.normalized.Definition#name" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -126,7 +126,7 @@ as <a href="CodeDefinition.html" class="extype" name="devsearch.normalized.CodeD
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Name of the definition</p>
     </li></ol>
             </div>
 

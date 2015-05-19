@@ -40,17 +40,20 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a> extension that provides control-flow and SSA helpers.</p><p>The control-flow graph guarantees we have a control-flow <a href="#Node&lt;:devsearch.normalized.Node" class="extmbr" name="devsearch.normalized.ControlFlowGraph.Node">Node</a>
-as graph node and provides four kinds of functionalities:</p><p>1. Efficient graph properties, namely connectedness and transitive
-connectedness in methods <code>next</code>, <code>prev</code>, <code>transitiveNext</code>, <code>transitivePrev</code>
-and <code>transitiveEdge</code>.</p><p>2. Dominator-tree computation. The dominator tree and dominance frontier
-are computed using the Lengauer-Tarjan algorithm and can be accessed through
-the <a href="#dominator(node:ControlFlowGraph.this.Node):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominator">dominator</a>, <a href="#dominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominated">dominated</a>, <a href="#transitiveDominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#transitiveDominated">transitiveDominated</a> and <a href="#frontier(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#frontier">frontier</a>
-methods.</p><p>3. Let-def sequence computation and access through the methods
-<a href="#definingStatement(id:devsearch.normalized.Identifier):Option[devsearch.normalized.Statement]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingStatement">definingStatement</a> and <a href="#definingNode(id:devsearch.normalized.Identifier):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingNode">definingNode</a> for identifiers. Furthermore, we
-also provide a <a href="#dependencies(id:devsearch.normalized.Identifier):Set[devsearch.normalized.Identifier]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dependencies">dependencies</a> method that tracks the dependency tree
-between local variables.</p><p>4. Loop extraction that computes control-flow loops that can later be used
-to discover properties about control-flow.
-</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> with <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
+as graph node and provides four kinds of functionalities:</p><ol class="decimal"><li>Efficient graph properties, namely connectedness and transitive
+    connectedness in methods <code>next</code>, <code>prev</code>, <code>transitiveNext</code>, <code>transitivePrev</code>
+    and <code>transitiveEdge</code>.
+ 2. Dominator-tree computation. The dominator tree and dominance frontier
+    are computed using the Lengauer-Tarjan algorithm and can be accessed through
+    the <a href="#dominator(node:ControlFlowGraph.this.Node):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominator">dominator</a>, <a href="#dominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominated">dominated</a>, <a href="#transitiveDominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#transitiveDominated">transitiveDominated</a> and <a href="#frontier(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#frontier">frontier</a>
+    methods.
+ 3. Let-def sequence computation and access through the methods
+    <a href="#definingStatement(id:devsearch.normalized.Identifier):Option[devsearch.normalized.Statement]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingStatement">definingStatement</a> and <a href="#definingNode(id:devsearch.normalized.Identifier):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingNode">definingNode</a> for identifiers. Furthermore, we
+    also provide a <a href="#dependencies(id:devsearch.normalized.Identifier):Set[devsearch.normalized.Identifier]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dependencies">dependencies</a> method that tracks the dependency tree
+    between local variables.
+ 4. Loop extraction that computes control-flow loops that can later be used
+    to discover properties about control-flow.
+</li></ol></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> with <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
