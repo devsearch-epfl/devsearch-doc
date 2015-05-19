@@ -39,7 +39,18 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base trait for DevSearch parsers</p><p>Each parser must specify the language for which is it intended in
+<code><code><code>scala
+def language: String
+<code><code><code>
+Note that this language must be defined in <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">Languages.orderedLangList</a> with associated
+meta-data. Furthermore, the meat-and-bones of the parser are defined in
+<code><code><code>scala
+def parse(source: Source): AST
+<code><code><code>
+which will transform a code source into an AST. Note that this function can throw <a href="ParsingFailedError.html" class="extype" name="devsearch.parsers.ParsingFailedError">ParsingFailedError</a>
+if the parsing fails due to invalid source code.
+</code></code></code></code></code></code></code></code></code></code></code></code></p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -86,7 +97,7 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="devsearch.parsers.Parser#language" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="devsearch.parsers.Parser#language" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="language:String"></a>
       <a id="language:String"></a>
       <h4 class="signature">
@@ -98,7 +109,8 @@
         <span class="name">language</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The language this parser is intended for</p><div class="fullcomment"><div class="comment cmt"><p>The language this parser is intended for</p><p>This language must be defined in <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">Languages.orderedLangList</a>!
+</p></div></div>
     </li><li name="devsearch.parsers.Parser#parse" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="parse(source:devsearch.ast.Source):devsearch.ast.AST"></a>
       <a id="parse(Source):AST"></a>
@@ -111,7 +123,7 @@
         <span class="name">parse</span><span class="params">(<span name="source">source: <a href="../ast/Source.html" class="extype" name="devsearch.ast.Source">Source</a></span>)</span><span class="result">: <a href="../ast/AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Actually parsing the source code into an AST</p>
     </li></ol>
             </div>
 
@@ -349,7 +361,7 @@
         <span class="name">parse</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="../ast/AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Utility method that performs parsing given a file path</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

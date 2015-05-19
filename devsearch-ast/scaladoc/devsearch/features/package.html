@@ -39,13 +39,47 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"></div>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Code feature definition and extraction.</p><p>In order to perform scalable analysis and identify code snippets that are close to each
+other, we provide feature extractors that enable indexed lookup of code. The feature
+interface is extremely flexible and each code feature is fully determined by a string
+key (unique among all features) and a position in a code file (see <a href="Feature.html" class="extype" name="devsearch.features.Feature">features.Feature</a>).</p><p>To facilitate feature extraction for a given <a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">features.CodeFile</a>, we provide the
+<a href="FeatureRecognizer$.html" class="extype" name="devsearch.features.FeatureRecognizer">features.FeatureRecognizer</a> object in order to extracts all features from a given code file.</p><p>Also, when the source language is unknown, one can use the <a href="QueryRecognizer$.html" class="extype" name="devsearch.features.QueryRecognizer">features.QueryRecognizer</a>
+object to extract a code file from a language-agnostic source snippet.</p><p>For a brief overview, one can look at:
+- <a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">features.CodeFile</a>, <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">features.CodeFileLocation</a> and <a href="CodePiecePosition.html" class="extype" name="devsearch.features.CodePiecePosition">features.CodePiecePosition</a> for
+feature extractor inputs and feature positioning
+- <a href="Feature.html" class="extype" name="devsearch.features.Feature">features.Feature</a> and <a href="FeatureExtractor.html" class="extype" name="devsearch.features.FeatureExtractor">features.FeatureExtractor</a> for new feature definition (don't
+forget to extend the <a href="FeatureRecognizer$.html#extractors:scala.collection.immutable.Set[devsearch.features.FeatureExtractor]" class="extmbr" name="devsearch.features.FeatureRecognizer#extractors">features.FeatureRecognizer.extractors</a> list with your new feature
+extractor)
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
         <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
-        
-        
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="devsearch.features"><span>features</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -109,7 +143,7 @@
         <a href="CodeFile.html"><span class="name">CodeFile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">AST wrapper with meta-data</p>
     </li><li name="devsearch.features.CodeFileLocation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CodeFileLocationextendsSerializablewithProductwithSerializable"></a>
       <a id="CodeFileLocation:CodeFileLocation"></a>
@@ -122,7 +156,7 @@
         <a href="CodeFileLocation.html"><span class="name">CodeFileLocation</span></a><span class="params">(<span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repoName">repoName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Location of a complete code file.</p>
     </li><li name="devsearch.features.CodePiecePosition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CodePiecePositionextendsSerializablewithProductwithSerializable"></a>
       <a id="CodePiecePosition:CodePiecePosition"></a>
@@ -135,7 +169,7 @@
         <a href="CodePiecePosition.html"><span class="name">CodePiecePosition</span></a><span class="params">(<span name="location">location: <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">CodeFileLocation</a></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Position in a code file</p>
     </li><li name="devsearch.features.ControlFeature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ControlFeatureextendsFeaturewithProductwithSerializable"></a>
       <a id="ControlFeature:ControlFeature"></a>
@@ -376,7 +410,7 @@
         <a href="CodeFile$.html"><span class="name">CodeFile</span></a>
       </span>
       </h4>
-      
+      <p class="comment cmt">Companion object to <a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">CodeFile</a> that provides some utility constructor/deconstructors.</p>
     </li><li name="devsearch.features.Feature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Feature"></a>
       <a id="Feature:Feature"></a>
@@ -454,7 +488,7 @@
         <a href="QueryRecognizer$.html"><span class="name">QueryRecognizer</span></a>
       </span>
       </h4>
-      
+      <p class="comment cmt">Parser for language-agnostic code.</p>
     </li><li name="devsearch.features.SemanticExtractor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SemanticExtractor"></a>
       <a id="SemanticExtractor:SemanticExtractor"></a>
@@ -516,7 +550,11 @@
         </div>
 
         <div id="inheritedMembers">
-        
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
         </div>
 

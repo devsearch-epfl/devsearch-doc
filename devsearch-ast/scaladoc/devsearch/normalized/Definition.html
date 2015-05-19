@@ -39,7 +39,29 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Named node in the normal form definition tree.</p><p>The SSA normal form we provide outputs a definition tree such that any
+code definition (like classes, objects, functions, etc.) is wrapped into
+a <code>Definition</code> and points to the next <code>Definition</code> instances that are
+defined inside itself.</p><p>For example, the Scala code
+<code><code><code>scala
+class A {
+  def f: Int = ...
+  def test(i: Int): Boolean = {
+    def rec(a: Int): Int = ...
+    ...
+  }
+}
+<code><code><code>
+gives rise to the definition tree:
+<code><code><code>
+   A
+  / \
+ f  test
+     |
+    rec
+<code><code><code></code></code></code></code></code></code></code></code></code></code></code></code></p><p>Definitions that have associated behavior (i.e. functions) are defined
+as <a href="CodeDefinition.html" class="extype" name="devsearch.normalized.CodeDefinition">CodeDefinition</a> instances.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">

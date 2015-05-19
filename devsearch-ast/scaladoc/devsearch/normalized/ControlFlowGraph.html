@@ -39,7 +39,18 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> with <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a> extension that provides control-flow and SSA helpers.</p><p>The control-flow graph guarantees we have a control-flow <a href="#Node&lt;:devsearch.normalized.Node" class="extmbr" name="devsearch.normalized.ControlFlowGraph.Node">Node</a>
+as graph node and provides four kinds of functionalities:</p><p>1. Efficient graph properties, namely connectedness and transitive
+connectedness in methods <code>next</code>, <code>prev</code>, <code>transitiveNext</code>, <code>transitivePrev</code>
+and <code>transitiveEdge</code>.</p><p>2. Dominator-tree computation. The dominator tree and dominance frontier
+are computed using the Lengauer-Tarjan algorithm and can be accessed through
+the <a href="#dominator(node:ControlFlowGraph.this.Node):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominator">dominator</a>, <a href="#dominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dominated">dominated</a>, <a href="#transitiveDominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#transitiveDominated">transitiveDominated</a> and <a href="#frontier(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#frontier">frontier</a>
+methods.</p><p>3. Let-def sequence computation and access through the methods
+<a href="#definingStatement(id:devsearch.normalized.Identifier):Option[devsearch.normalized.Statement]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingStatement">definingStatement</a> and <a href="#definingNode(id:devsearch.normalized.Identifier):Option[ControlFlowGraph.this.Node]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingNode">definingNode</a> for identifiers. Furthermore, we
+also provide a <a href="#dependencies(id:devsearch.normalized.Identifier):Set[devsearch.normalized.Identifier]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#dependencies">dependencies</a> method that tracks the dependency tree
+between local variables.</p><p>4. Loop extraction that computes control-flow loops that can later be used
+to discover properties about control-flow.
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> with <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -114,8 +125,8 @@
         <span class="name">definingNode</span><span class="params">(<span name="id">id: <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="devsearch.normalized.ControlFlowGraph#definingStatement" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The node in which the <a href="#definingStatement(id:devsearch.normalized.Identifier):Option[devsearch.normalized.Statement]" class="extmbr" name="devsearch.normalized.ControlFlowGraph#definingStatement">definingStatement</a> of the given local variable resides</p>
+    </li><li name="devsearch.normalized.ControlFlowGraph#definingStatement" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="definingStatement(id:devsearch.normalized.Identifier):Option[devsearch.normalized.Statement]"></a>
       <a id="definingStatement(Identifier):Option[Statement]"></a>
       <h4 class="signature">
@@ -127,7 +138,9 @@
         <span class="name">definingStatement</span><span class="params">(<span name="id">id: <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The assignment statement that defines the given local variable if it exists.</p><div class="fullcomment"><div class="comment cmt"><p>The assignment statement that defines the given local variable if it exists.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a> for more information about assignment
+</p></span></dd></dl></div>
     </li><li name="devsearch.normalized.ControlFlowGraph#dependencies" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="dependencies(id:devsearch.normalized.Identifier):Set[devsearch.normalized.Identifier]"></a>
       <a id="dependencies(Identifier):Set[Identifier]"></a>
@@ -140,7 +153,7 @@
         <span class="name">dependencies</span><span class="params">(<span name="id">id: <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The set of variables upon which the given local variable depends</p>
     </li><li name="devsearch.normalized.ControlFlowGraph#dominated" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="dominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]"></a>
       <a id="dominated((ControlFlowGraph.this)#Node):Set[(ControlFlowGraph.this)#Node]"></a>
@@ -153,8 +166,8 @@
         <span class="name">dominated</span><span class="params">(<span name="node">node: (<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="devsearch.normalized.ControlFlowGraph#dominator" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The set of nodes that are directly dominated by the argument node</p>
+    </li><li name="devsearch.normalized.ControlFlowGraph#dominator" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="dominator(node:ControlFlowGraph.this.Node):Option[ControlFlowGraph.this.Node]"></a>
       <a id="dominator((ControlFlowGraph.this)#Node):Option[(ControlFlowGraph.this)#Node]"></a>
       <h4 class="signature">
@@ -166,7 +179,9 @@
         <span class="name">dominator</span><span class="params">(<span name="node">node: (<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Direct dominator of a node.</p><div class="fullcomment"><div class="comment cmt"><p>Direct dominator of a node. Returns an option to deal with nodes that have
+no dominator, namely the graph entry-point.
+</p></div></div>
     </li><li name="devsearch.normalized.ControlFlowGraph#frontier" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="frontier(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]"></a>
       <a id="frontier((ControlFlowGraph.this)#Node):Set[(ControlFlowGraph.this)#Node]"></a>
@@ -179,7 +194,7 @@
         <span class="name">frontier</span><span class="params">(<span name="node">node: (<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The dominance-frontier of the argument node</p>
     </li><li name="devsearch.normalized.ControlFlowGraph#loops" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="loops:Set[List[ControlFlowGraph.this.Node]]"></a>
       <a id="loops:Set[List[(ControlFlowGraph.this)#Node]]"></a>
@@ -192,7 +207,7 @@
         <span class="name">loops</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.List">List</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The set of all control-flow loops that can be found in this graph</p>
     </li><li name="devsearch.normalized.ControlFlowGraph#transitiveDominated" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="transitiveDominated(node:ControlFlowGraph.this.Node):Set[ControlFlowGraph.this.Node]"></a>
       <a id="transitiveDominated((ControlFlowGraph.this)#Node):Set[(ControlFlowGraph.this)#Node]"></a>
@@ -205,7 +220,7 @@
         <span class="name">transitiveDominated</span><span class="params">(<span name="node">node: (<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[(<a href="" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>.this)#<span class="extype" name="devsearch.normalized.Graph.Node">Node</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The set of all nodes that the argument node dominates (transitive closure)</p>
     </li></ol>
             </div>
 

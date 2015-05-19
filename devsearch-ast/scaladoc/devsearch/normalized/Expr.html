@@ -39,7 +39,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SSA expression super-type.</p><p>It should be noted that the <a href="Value.html" class="extype" name="devsearch.normalized.Value">Value</a> type is a sub-type of <a href="" class="extype" name="devsearch.normalized.Expr">Expr</a> since leaf
+expressions can appear anywhere a more complex expression is valid. Note also that
+all fields of <a href="" class="extype" name="devsearch.normalized.Expr">Expr</a> sub-types are always <a href="Value.html" class="extype" name="devsearch.normalized.Value">Value</a> elements and complex
+expressions are flattened out into their simple components.</p><p>We provide both a <a href="#rename(f:devsearch.normalized.Identifier=&gt;devsearch.normalized.Identifier):devsearch.normalized.Expr" class="extmbr" name="devsearch.normalized.Expr#rename">rename</a> utility and <a href="#dependencies:Set[devsearch.normalized.Identifier]" class="extmbr" name="devsearch.normalized.Expr#dependencies">dependencies</a> that can be used to
+respectively map identifiers to other values and compute the set of identifiers
+an expression depends on where identifiers represent local variables.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../ast/Positional.html" class="extype" name="devsearch.ast.Positional">Positional</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -197,7 +203,7 @@
         <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Compute the set of depending identifiers for the current expression</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -346,7 +352,7 @@
         <span class="name">rename</span><span class="params">(<span name="f">f: (<a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a>) ⇒ <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <a href="" class="extype" name="devsearch.normalized.Expr">Expr</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Transform identifiers given the argument function <code>f</code></p>
     </li><li name="devsearch.ast.Positional#setPos" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setPos(newpos:devsearch.ast.Position):Positional.this.type"></a>
       <a id="setPos(Position):Expr.this.type"></a>

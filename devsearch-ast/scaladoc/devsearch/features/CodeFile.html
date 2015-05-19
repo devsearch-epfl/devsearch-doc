@@ -39,7 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>AST wrapper with meta-data</p><p>Most analysis is performed directly on the source AST, but it can be useful to have a little
+more information about the considered code such as location and source language.</p><p>Location is especially important as it enables feature extractors to point back from
+locally-positioned ASTs to global positions in the cloud (see <a href="Feature.html" class="extype" name="devsearch.features.Feature">Feature</a>).
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -95,7 +98,7 @@
         <span class="name">ast</span><span class="result">: <a href="../ast/AST.html" class="extype" name="devsearch.ast.AST">AST</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Abstract syntax tree representation of source file</p>
     </li><li name="devsearch.features.CodeFile#language" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="language:String"></a>
       <a id="language:String"></a>
@@ -108,7 +111,7 @@
         <span class="name">language</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Source code language, should be contained in <a href="../parsers/Languages$.html" class="extype" name="devsearch.parsers.Languages">devsearch.parsers.Languages</a>.</p>
     </li><li name="devsearch.features.CodeFile#location" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="location:devsearch.features.CodeFileLocation"></a>
       <a id="location:CodeFileLocation"></a>
@@ -121,7 +124,7 @@
         <span class="name">location</span><span class="result">: <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">CodeFileLocation</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The global location of the source file in the cloud, see <a href="CodeFileLocation.html" class="extype" name="devsearch.features.CodeFileLocation">CodeFileLocation</a></p>
     </li></ol>
             </div>
 

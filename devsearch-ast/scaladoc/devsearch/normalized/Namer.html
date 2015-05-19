@@ -245,7 +245,7 @@ to their original definitions.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="devsearch.normalized.Namer#fresh" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="devsearch.normalized.Namer#fresh" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fresh(name:String):String"></a>
       <a id="fresh(String):String"></a>
       <h4 class="signature">
@@ -257,7 +257,7 @@ to their original definitions.
         <span class="name">fresh</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Returns a fresh name.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a fresh name. Tries to keep it nice and readable when possible</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -297,7 +297,7 @@ to their original definitions.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="devsearch.normalized.Namer#maintain" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="devsearch.normalized.Namer#maintain" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="maintain(name:String):Unit"></a>
       <a id="maintain(String):Unit"></a>
       <h4 class="signature">
@@ -309,7 +309,9 @@ to their original definitions.
         <span class="name">maintain</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Registers a name that cannot be used as a fresh name.</p><div class="fullcomment"><div class="comment cmt"><p>Registers a name that cannot be used as a fresh name.</p><p>Note that this method will throw a <a href="NamingError.html" class="extype" name="devsearch.normalized.NamingError">NamingError</a> if the name to maintain has
+already been used as a fresh name (can't be guaranteed maintained if that's the case).
+</p></div></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

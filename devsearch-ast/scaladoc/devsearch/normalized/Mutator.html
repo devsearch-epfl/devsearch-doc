@@ -39,7 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A mutating expression that changes program state.</p><p>This is a useful statement as the rest of SSA form is functional and pure (modulo
+a certain pure definition of phi-functions).</p><p>We take an <a href="Expr.html" class="extype" name="devsearch.normalized.Expr">Expr</a> instance here as mutator as values themselves cannot mutate
+the program state in general.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a>, <a href="../ast/Positional.html" class="extype" name="devsearch.ast.Positional">Positional</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -333,7 +336,7 @@
         <span class="name">rename</span><span class="params">(<span name="f">f: (<a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a>) ⇒ <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a></dd></dl></div>
+      <p class="shortcomment cmt">Transform identifiers given the argument function <code>f</code></p><div class="fullcomment"><div class="comment cmt"><p>Transform identifiers given the argument function <code>f</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a></dd></dl></div>
     </li><li name="devsearch.ast.Positional#setPos" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setPos(newpos:devsearch.ast.Position):Positional.this.type"></a>
       <a id="setPos(Position):Mutator.this.type"></a>

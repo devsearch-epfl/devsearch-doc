@@ -39,9 +39,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Commentable</p><p>Trait that enables comment attribution to a given tree.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Commentable</p><p>Trait that enables comment attribution to a given tree (or other structure).
 Comments are stored as options to model the likely case of no comment for a given node,
-and we provide <a href="#setComment(comment:String):Commentable.this.type" class="extmbr" name="devsearch.ast.Commentable#setComment">setComment</a>, <a href="#appendComment(opt:Option[String]):Commentable.this.type" class="extmbr" name="devsearch.ast.Commentable#appendComment">appendComment</a> and <a href="#prependComment(opt:Option[String]):Commentable.this.type" class="extmbr" name="devsearch.ast.Commentable#prependComment">prependComment</a> utilities to modify
+and we provide <code>setComment</code>, <code>appendComment</code> and <code>prependComment</code> utilities to modify
 the internally stored comment option.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -182,7 +182,7 @@ the internally stored comment option.
         <span class="name">appendComment</span><span class="params">(<span name="comment">comment: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="devsearch.ast.Commentable">Commentable</a>.this.type</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Extends the current comment by adding <code>comment</code> at the end, or setting it if no comment is defined</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -376,7 +376,7 @@ the internally stored comment option.
         <span class="name">prependComment</span><span class="params">(<span name="comment">comment: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="devsearch.ast.Commentable">Commentable</a>.this.type</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Extends the current comment by adding <code>comment</code> at the beginning, or setting it if no comment is defined</p>
     </li><li name="devsearch.ast.Commentable#setComment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setComment(comment:String):Commentable.this.type"></a>
       <a id="setComment(String):Commentable.this.type"></a>

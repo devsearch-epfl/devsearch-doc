@@ -39,7 +39,16 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SSA statement super-type.</p><p>Statements in SSA normal form basically consist in assignments:
+- <a href="Assign.html" class="extype" name="devsearch.normalized.Assign">Assign</a>, a standard local assignment node
+- <a href="MultiAssign.html" class="extype" name="devsearch.normalized.MultiAssign">MultiAssign</a>, a deconstrucing assignment that extracts tuple fields
+- <a href="FieldAssign.html" class="extype" name="devsearch.normalized.FieldAssign">FieldAssign</a>, assignment to an object fields
+- <a href="IndexAssign.html" class="extype" name="devsearch.normalized.IndexAssign">IndexAssign</a>, assignment to an array index</p><p>Two more statements are available to encode mutation and are:
+- <a href="Mutator.html" class="extype" name="devsearch.normalized.Mutator">Mutator</a>, a wrapper for an expression that mutates the program
+- <a href="Throw.html" class="extype" name="devsearch.normalized.Throw">Throw</a>, an exception-throwing statement that terminates the current
+control-flow block</p><p>We also provide a <a href="#rename(f:devsearch.normalized.Identifier=&gt;devsearch.normalized.Identifier):devsearch.normalized.Statement" class="extmbr" name="devsearch.normalized.Statement#rename">rename</a> utility method that is mainly used during
+the single-assignment transformation.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../ast/Positional.html" class="extype" name="devsearch.ast.Positional">Positional</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -333,7 +342,7 @@
         <span class="name">rename</span><span class="params">(<span name="f">f: (<a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a>) ⇒ <a href="Identifier.html" class="extype" name="devsearch.normalized.Identifier">Identifier</a></span>)</span><span class="result">: <a href="" class="extype" name="devsearch.normalized.Statement">Statement</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Transform identifiers given the argument function <code>f</code></p>
     </li><li name="devsearch.ast.Positional#setPos" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setPos(newpos:devsearch.ast.Position):Positional.this.type"></a>
       <a id="setPos(Position):Statement.this.type"></a>

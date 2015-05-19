@@ -39,7 +39,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.GraphOps">GraphOps</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Graph operations</p><p>Much like the <code>CanBuildFrom</code> design pattern in Scala, we use <code>GraphOps</code> to
+provide the graph with the necessary functions for functional graph transformations.</p><p>To ensure the types make sense before and after transformation, <code>GraphOps</code> are
+type-parametric in <code>Node</code>, <code>Edge</code> and <code>Graph</code>. These types are used in the creation
+functions:
+- <a href="#newEdge(edge:GraphOps.this.Edge,from:GraphOps.this.Node,to:GraphOps.this.Node):GraphOps.this.Edge" class="extmbr" name="devsearch.normalized.GraphOps#newEdge">newEdge</a> which transforms an edge with two new Nodes
+- <a href="#newGraph(nodes:List[GraphOps.this.Node],edges:Set[GraphOps.this.Edge]):GraphOps.this.Graph" class="extmbr" name="devsearch.normalized.GraphOps#newGraph">newGraph</a> which builds a same-typed graph from a set of nodes and edges
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.GraphOps">GraphOps</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -140,8 +146,10 @@
         <span class="name">newEdge</span><span class="params">(<span name="edge">edge: <a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=GraphOps.this.Node}" class="extmbr" name="devsearch.normalized.GraphOps.Edge">Edge</a></span>, <span name="from">from: <a href="#Node" class="extmbr" name="devsearch.normalized.GraphOps.Node">Node</a></span>, <span name="to">to: <a href="#Node" class="extmbr" name="devsearch.normalized.GraphOps.Node">Node</a></span>)</span><span class="result">: <a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=GraphOps.this.Node}" class="extmbr" name="devsearch.normalized.GraphOps.Edge">Edge</a></span>
       </span>
       </h4>
-      
-    </li><li name="devsearch.normalized.GraphOps#newGraph" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Builds a new <code>Edge</code> instance based on the meta-data of the <code>edge</code> parameter connecting
+nodes <code>from</code> and <code>to</code>
+</p>
+    </li><li name="devsearch.normalized.GraphOps#newGraph" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="newGraph(nodes:List[GraphOps.this.Node],edges:Set[GraphOps.this.Edge]):GraphOps.this.Graph"></a>
       <a id="newGraph(List[Node],Set[Edge]):Graph"></a>
       <h4 class="signature">
@@ -153,7 +161,8 @@
         <span class="name">newGraph</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.List">List</span>[<a href="#Node" class="extmbr" name="devsearch.normalized.GraphOps.Node">Node</a>]</span>, <span name="edges">edges: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=GraphOps.this.Node}" class="extmbr" name="devsearch.normalized.GraphOps.Edge">Edge</a>]</span>)</span><span class="result">: <a href="#Graph&lt;:devsearch.normalized.Graph{typeNode=GraphOps.this.Node;typeEdge=GraphOps.this.Edge}" class="extmbr" name="devsearch.normalized.GraphOps.Graph">Graph</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Builds a new <code>Graph</code> instance based on <code>nodes</code> and <code>edges</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Builds a new <code>Graph</code> instance based on <code>nodes</code> and <code>edges</code>.</p><p>Note that all <code>Edge</code> instances in <code>edges</code> must connect nodes contained in <code>nodes</code>!
+</p></div></div>
     </li></ol>
             </div>
 

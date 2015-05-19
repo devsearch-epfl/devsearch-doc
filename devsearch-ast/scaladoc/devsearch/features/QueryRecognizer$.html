@@ -39,7 +39,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Parser for language-agnostic code.</p><p>In some cases, it can be useful to parse some source code even though the
+source language is unknown. We perform this by successively applying the available
+parsers (as defined in <a href="../parsers/Languages$.html" class="extype" name="devsearch.parsers.Languages">devsearch.parsers.Languages</a>) to the code snippet
+until a parser is able to recognize the snippet.</p><p>Since we only take the first parse result, it is important to order the languages
+in a meaningful manner. See <a href="../parsers/Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">devsearch.parsers.Languages.orderedLangList</a> for
+more information.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -162,7 +168,7 @@
         <span class="name">apply</span><span class="params">(<span name="query">query: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="CodeFile.html" class="extype" name="devsearch.features.CodeFile">CodeFile</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Extract a code snippet of unknown language to a code file if possible.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

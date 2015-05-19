@@ -39,7 +39,16 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Generic directed graph base-type</p><p>Provides basic graph functionalities such as
+- <a href="#nodes:List[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#nodes">nodes</a>, the set of nodes in this graph
+- <a href="#edges:Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#edges">edges</a>, the set of edges in this graph
+- <a href="#firstNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#firstNode">firstNode</a> and <a href="#lastNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#lastNode">lastNode</a>, the respective first and last nodes of this graph
+(we require these to exist in our use case)
+- <a href="#next(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#next">next</a>, <a href="#prev(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#prev">prev</a>, <a href="#transitiveNext(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitiveNext">transitiveNext</a>, <a href="#transitivePrev(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitivePrev">transitivePrev</a> and <a href="#transitiveEdge(n1:Graph.this.Node,n2:Graph.this.Node):Boolean" class="extmbr" name="devsearch.normalized.Graph#transitiveEdge">transitiveEdge</a>
+graph connectedness functions
+- <a href="#map(f:Graph.this.Node=&gt;Graph.this.Node)(implicitops:devsearch.normalized.GraphOps{typeNode=Graph.this.Node;typeEdge=Graph.this.Edge}):ops.Graph" class="extmbr" name="devsearch.normalized.Graph#map">map</a> that transforms the nodes in the graph
+- some pretty-printing utilities such as <a href="#printStructure:String" class="extmbr" name="devsearch.normalized.Graph#printStructure">printStructure</a>
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -127,7 +136,7 @@
         <span class="name">edges</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=Graph.this.Node}" class="extmbr" name="devsearch.normalized.Graph.Edge">Edge</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The edges of this graph</p>
     </li><li name="devsearch.normalized.Graph#nodes" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="nodes:List[Graph.this.Node]"></a>
       <a id="nodes:List[Node]"></a>
@@ -140,7 +149,7 @@
         <span class="name">nodes</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The nodes of this graph</p>
     </li></ol>
             </div>
 
@@ -288,7 +297,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="devsearch.normalized.Graph#firstNode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="devsearch.normalized.Graph#firstNode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="firstNode:Graph.this.Node"></a>
       <a id="firstNode:Node"></a>
       <h4 class="signature">
@@ -300,7 +309,8 @@
         <span class="name">firstNode</span><span class="result">: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The first node of this graph.</p><div class="fullcomment"><div class="comment cmt"><p>The first node of this graph. This node has a path to all other nodes</p><p>Note that by convention, we use <code>nodes.head</code> as first node.
+</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -340,7 +350,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="devsearch.normalized.Graph#lastNode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="devsearch.normalized.Graph#lastNode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lastNode:Graph.this.Node"></a>
       <a id="lastNode:Node"></a>
       <h4 class="signature">
@@ -352,8 +362,9 @@
         <span class="name">lastNode</span><span class="result">: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>
       </span>
       </h4>
-      
-    </li><li name="devsearch.normalized.Graph#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The last node of this graph.</p><div class="fullcomment"><div class="comment cmt"><p>The last node of this graph. All other nodes have a path to this node</p><p>Note that by convention, we use <code>nodes.last</code> as last node.
+</p></div></div>
+    </li><li name="devsearch.normalized.Graph#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map(f:Graph.this.Node=&gt;Graph.this.Node)(implicitops:devsearch.normalized.GraphOps{typeNode=Graph.this.Node;typeEdge=Graph.this.Edge}):ops.Graph"></a>
       <a id="map((Node)⇒Node)(GraphOps{.../*2definitionsintyperefinement*/}):(ops)#Graph"></a>
       <h4 class="signature">
@@ -365,7 +376,10 @@
         <span class="name">map</span><span class="params">(<span name="f">f: (<a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a>) ⇒ <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ops">ops: <a href="GraphOps.html" class="extype" name="devsearch.normalized.GraphOps">GraphOps</a> { ... /* 2 definitions in type refinement */ }</span>)</span><span class="result">: (<span class="extype" name="devsearch.normalized.Graph.map.ops">ops</span>)#<span class="extype" name="devsearch.normalized.GraphOps.Graph">Graph</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Transformation on the current map that applies <code>f</code> to all contained nodes.</p><div class="fullcomment"><div class="comment cmt"><p>Transformation on the current map that applies <code>f</code> to all contained nodes. In the process,
+the function also updates all edges to point to the new nodes.</p><p>Note that this function requires an implicit instance of <code>GraphOps</code> to build the resulting
+graph and edges. See <a href="GraphOps.html" class="extype" name="devsearch.normalized.GraphOps">GraphOps</a> for more information.
+</p></div></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -391,7 +405,7 @@
         <span class="name">next</span><span class="params">(<span name="node">node: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=Graph.this.Node}" class="extmbr" name="devsearch.normalized.Graph.Edge">Edge</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Provides all outgoing edges from <code>node</code></p>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -430,8 +444,8 @@
         <span class="name">prev</span><span class="params">(<span name="node">node: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Edge&lt;:devsearch.normalized.Edge{typeNode=Graph.this.Node}" class="extmbr" name="devsearch.normalized.Graph.Edge">Edge</a>]</span>
       </span>
       </h4>
-      
-    </li><li name="devsearch.normalized.Graph#printStructure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Provides all incoming edges to <code>node</code></p>
+    </li><li name="devsearch.normalized.Graph#printStructure" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="printStructure:String"></a>
       <a id="printStructure:String"></a>
       <h4 class="signature">
@@ -443,7 +457,26 @@
         <span class="name">printStructure</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Pretty-print the graph edges using indices for node identifiers.</p><div class="fullcomment"><div class="comment cmt"><p>Pretty-print the graph edges using indices for node identifiers.</p><p>The following graph:
+<code><code><code>
+     A
+ r1 / \ r2
+   B   C
+ r3 \ / r4
+     D
+  r5 |
+     E
+<code><code><code>
+would result in:
+<code><code><code>
+(1,2,r1)
+(1,3,r2)
+(2,4,r3)
+(3,4,r4)
+(4,5,r5)
+<code><code><code>
+where r1-r5 are the edge labels, see <a href="Edge.html#reason:String" class="extmbr" name="devsearch.normalized.Edge#reason">devsearch.normalized.Edge!.reason</a>.
+</code></code></code></code></code></code></code></code></code></code></code></code></p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -482,7 +515,7 @@
         <span class="name">transitiveEdge</span><span class="params">(<span name="n1">n1: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>, <span name="n2">n2: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Determines whether <code>n1</code> has a path to <code>n2</code></p>
     </li><li name="devsearch.normalized.Graph#transitiveNext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="transitiveNext(node:Graph.this.Node):Set[Graph.this.Node]"></a>
       <a id="transitiveNext(Node):Set[Node]"></a>
@@ -495,7 +528,7 @@
         <span class="name">transitiveNext</span><span class="params">(<span name="node">node: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Provides the set of reachable nodes from <code>node</code></p>
     </li><li name="devsearch.normalized.Graph#transitivePrev" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="transitivePrev(node:Graph.this.Node):Set[Graph.this.Node]"></a>
       <a id="transitivePrev(Node):Set[Node]"></a>
@@ -508,7 +541,7 @@
         <span class="name">transitivePrev</span><span class="params">(<span name="node">node: <a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="#Node" class="extmbr" name="devsearch.normalized.Graph.Node">Node</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Provides the set of nodes that can reach <code>node</code></p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
