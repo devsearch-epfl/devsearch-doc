@@ -42,24 +42,17 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Named node in the normal form definition tree.</p><p>The SSA normal form we provide outputs a definition tree such that any
 code definition (like classes, objects, functions, etc.) is wrapped into
 a <code>Definition</code> and points to the next <code>Definition</code> instances that are
-defined inside itself.</p><p>For example, the Scala code
-<code><code><code>scala
-class A {
-  def f: Int = ...
-  def test(i: Int): Boolean = {
-    def rec(a: Int): Int = ...
-    ...
-  }
+defined inside itself.</p><p>For example, the Scala code</p><pre><span class="kw">class</span> A {
+<span class="kw">def</span> f: <span class="std">Int</span> = ...
+<span class="kw">def</span> test(i: <span class="std">Int</span>): <span class="std">Boolean</span> = {
+  <span class="kw">def</span> rec(a: <span class="std">Int</span>): <span class="std">Int</span> = ...
+  ...
 }
-<code><code><code>
-gives rise to the definition tree:
-<code><code><code>
-   A
-  / \
- f  test
-     |
-    rec
-<code><code><code></code></code></code></code></code></code></code></code></code></code></code></code></p><p>Definitions that have associated behavior (i.e. functions) are defined
+}</pre><p>gives rise to the definition tree:</p><pre>A
+ / \
+f  test
+    |
+   rec</pre><p>Definitions that have associated behavior (i.e. functions) are defined
 as <a href="CodeDefinition.html" class="extype" name="devsearch.normalized.CodeDefinition">CodeDefinition</a> instances.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>

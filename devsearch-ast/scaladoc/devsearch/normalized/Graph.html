@@ -39,15 +39,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Generic directed graph base-type</p><p>Provides basic graph functionalities such as
-- <a href="#nodes:List[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#nodes">nodes</a>, the set of nodes in this graph
-- <a href="#edges:Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#edges">edges</a>, the set of edges in this graph
-- <a href="#firstNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#firstNode">firstNode</a> and <a href="#lastNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#lastNode">lastNode</a>, the respective first and last nodes of this graph
-(we require these to exist in our use case)
-- <a href="#next(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#next">next</a>, <a href="#prev(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#prev">prev</a>, <a href="#transitiveNext(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitiveNext">transitiveNext</a>, <a href="#transitivePrev(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitivePrev">transitivePrev</a> and <a href="#transitiveEdge(n1:Graph.this.Node,n2:Graph.this.Node):Boolean" class="extmbr" name="devsearch.normalized.Graph#transitiveEdge">transitiveEdge</a>
-graph connectedness functions
-- <a href="#map(f:Graph.this.Node=&gt;Graph.this.Node)(implicitops:devsearch.normalized.GraphOps{typeNode=Graph.this.Node;typeEdge=Graph.this.Edge}):ops.Graph" class="extmbr" name="devsearch.normalized.Graph#map">map</a> that transforms the nodes in the graph
-- some pretty-printing utilities such as <a href="#printStructure:String" class="extmbr" name="devsearch.normalized.Graph#printStructure">printStructure</a>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Generic directed graph base-type</p><p>Provides basic graph functionalities such as</p><p>- <a href="#nodes:List[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#nodes">nodes</a>, the set of nodes in this graph</p><p>- <a href="#edges:Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#edges">edges</a>, the set of edges in this graph</p><p>- <a href="#firstNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#firstNode">firstNode</a> and <a href="#lastNode:Graph.this.Node" class="extmbr" name="devsearch.normalized.Graph#lastNode">lastNode</a>, the respective first and last nodes of this graph
+(we require these to exist in our use case)</p><p>- <a href="#next(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#next">next</a>, <a href="#prev(node:Graph.this.Node):Set[Graph.this.Edge]" class="extmbr" name="devsearch.normalized.Graph#prev">prev</a>, <a href="#transitiveNext(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitiveNext">transitiveNext</a>, <a href="#transitivePrev(node:Graph.this.Node):Set[Graph.this.Node]" class="extmbr" name="devsearch.normalized.Graph#transitivePrev">transitivePrev</a> and <a href="#transitiveEdge(n1:Graph.this.Node,n2:Graph.this.Node):Boolean" class="extmbr" name="devsearch.normalized.Graph#transitiveEdge">transitiveEdge</a>
+graph connectedness functions</p><p>- <a href="#map(f:Graph.this.Node=&gt;Graph.this.Node)(implicitops:devsearch.normalized.GraphOps{typeNode=Graph.this.Node;typeEdge=Graph.this.Edge}):ops.Graph" class="extmbr" name="devsearch.normalized.Graph#map">map</a> that transforms the nodes in the graph</p><p>- some pretty-printing utilities such as <a href="#printStructure:String" class="extmbr" name="devsearch.normalized.Graph#printStructure">printStructure</a>
 </p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="devsearch.normalized.Graph">Graph</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -457,26 +451,18 @@ graph and edges. See <a href="GraphOps.html" class="extype" name="devsearch.norm
         <span class="name">printStructure</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Pretty-print the graph edges using indices for node identifiers.</p><div class="fullcomment"><div class="comment cmt"><p>Pretty-print the graph edges using indices for node identifiers.</p><p>The following graph:
-<code><code><code>
-     A
- r1 / \ r2
-   B   C
- r3 \ / r4
-     D
-  r5 |
-     E
-<code><code><code>
-would result in:
-<code><code><code>
-(1,2,r1)
-(1,3,r2)
-(2,4,r3)
-(3,4,r4)
-(4,5,r5)
-<code><code><code>
-where r1-r5 are the edge labels, see <a href="Edge.html#reason:String" class="extmbr" name="devsearch.normalized.Edge#reason">devsearch.normalized.Edge!.reason</a>.
-</code></code></code></code></code></code></code></code></code></code></code></code></p></div></div>
+      <p class="shortcomment cmt">Pretty-print the graph edges using indices for node identifiers.</p><div class="fullcomment"><div class="comment cmt"><p>Pretty-print the graph edges using indices for node identifiers.</p><p>The following graph:</p><pre>A
+r1 / \ r2
+  B   C
+r3 \ / r4
+    D
+ r5 |
+    E</pre><p>would result in:</p><pre>(<span class="num">1</span>,<span class="num">2</span>,r1)
+(<span class="num">1</span>,<span class="num">3</span>,r2)
+(<span class="num">2</span>,<span class="num">4</span>,r3)
+(<span class="num">3</span>,<span class="num">4</span>,r4)
+(<span class="num">4</span>,<span class="num">5</span>,r5)</pre><p>where r1-r5 are the edge labels, see <a href="Edge.html#reason:String" class="extmbr" name="devsearch.normalized.Edge#reason">devsearch.normalized.Edge!.reason</a>.
+</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

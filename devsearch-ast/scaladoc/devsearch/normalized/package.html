@@ -45,16 +45,9 @@ for code functionalities and semantic information.</p><p>The normal form is comp
 in a name and a list of children definitions (see <a href="Definition.html" class="extype" name="devsearch.normalized.Definition">Definition</a>). Function definitions
 are further annotated with a control-flow graph (see <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a> and <a href="ControlFlowGraph.html" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a>)
 where graph nodes contain SSA statements. The kind of statements these will consist in
-can be found by taking a look at the <a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a>, <a href="Expr.html" class="extype" name="devsearch.normalized.Expr">Expr</a> and <a href="Type.html" class="extype" name="devsearch.normalized.Type">Type</a> hierarchies.</p><p>For more information, look at:
-- <a href="AstExtraction.html" class="extype" name="devsearch.normalized.AstExtraction">AstExtraction</a> for transformation into SSA normal form
-- <a href="ControlFlowGraphs.html" class="extype" name="devsearch.normalized.ControlFlowGraphs">ControlFlowGraphs</a>, <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a> and <a href="ControlFlowGraph.html" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> for available operations on
-flow graphs
-- <a href="ScopingRenamer.html" class="extype" name="devsearch.normalized.ScopingRenamer">ScopingRenamer</a> for unique name assignment in scopes
-- <a href="SingleAssignment.html" class="extype" name="devsearch.normalized.SingleAssignment">SingleAssignment</a> for re-assignment cleaning and phi-function injection</p><p>Known limitations of the current SSA form are:
-- Not array-SSA, could be extended with a rather simple transformation from the current form
-- No handling of call-by-name which cannot be computed without a valid symbol table, which we
-do not have
-- Not so useful for certain functional properties, but is a good base-step for going towards
+can be found by taking a look at the <a href="Statement.html" class="extype" name="devsearch.normalized.Statement">Statement</a>, <a href="Expr.html" class="extype" name="devsearch.normalized.Expr">Expr</a> and <a href="Type.html" class="extype" name="devsearch.normalized.Type">Type</a> hierarchies.</p><p>For more information, look at:</p><p>- <a href="AstExtraction.html" class="extype" name="devsearch.normalized.AstExtraction">AstExtraction</a> for transformation into SSA normal form</p><p>- <a href="ControlFlowGraphs.html" class="extype" name="devsearch.normalized.ControlFlowGraphs">ControlFlowGraphs</a>, <a href="Graph.html" class="extype" name="devsearch.normalized.Graph">Graph</a> and <a href="ControlFlowGraph.html" class="extype" name="devsearch.normalized.ControlFlowGraph">ControlFlowGraph</a> for available operations on
+flow graphs</p><p>- <a href="ScopingRenamer.html" class="extype" name="devsearch.normalized.ScopingRenamer">ScopingRenamer</a> for unique name assignment in scopes</p><p>- <a href="SingleAssignment.html" class="extype" name="devsearch.normalized.SingleAssignment">SingleAssignment</a> for re-assignment cleaning and phi-function injection</p><p>Known limitations of the current SSA form are:</p><p>- Not array-SSA, could be extended with a rather simple transformation from the current form</p><p>- No handling of call-by-name which cannot be computed without a valid symbol table, which we
+do not have</p><p>- Not so useful for certain functional properties, but is a good base-step for going towards
 a Fold-normal form
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>

@@ -39,13 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SSA statement super-type.</p><p>Statements in SSA normal form basically consist in assignments:
-- <a href="Assign.html" class="extype" name="devsearch.normalized.Assign">Assign</a>, a standard local assignment node
-- <a href="MultiAssign.html" class="extype" name="devsearch.normalized.MultiAssign">MultiAssign</a>, a deconstrucing assignment that extracts tuple fields
-- <a href="FieldAssign.html" class="extype" name="devsearch.normalized.FieldAssign">FieldAssign</a>, assignment to an object fields
-- <a href="IndexAssign.html" class="extype" name="devsearch.normalized.IndexAssign">IndexAssign</a>, assignment to an array index</p><p>Two more statements are available to encode mutation and are:
-- <a href="Mutator.html" class="extype" name="devsearch.normalized.Mutator">Mutator</a>, a wrapper for an expression that mutates the program
-- <a href="Throw.html" class="extype" name="devsearch.normalized.Throw">Throw</a>, an exception-throwing statement that terminates the current
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SSA statement super-type.</p><p>Statements in SSA normal form basically consist in assignments:</p><p>- <a href="Assign.html" class="extype" name="devsearch.normalized.Assign">Assign</a>, a standard local assignment node</p><p>- <a href="MultiAssign.html" class="extype" name="devsearch.normalized.MultiAssign">MultiAssign</a>, a deconstrucing assignment that extracts tuple fields</p><p>- <a href="FieldAssign.html" class="extype" name="devsearch.normalized.FieldAssign">FieldAssign</a>, assignment to an object fields</p><p>- <a href="IndexAssign.html" class="extype" name="devsearch.normalized.IndexAssign">IndexAssign</a>, assignment to an array index</p><p>Two more statements are available to encode mutation and are:</p><p>- <a href="Mutator.html" class="extype" name="devsearch.normalized.Mutator">Mutator</a>, a wrapper for an expression that mutates the program</p><p>- <a href="Throw.html" class="extype" name="devsearch.normalized.Throw">Throw</a>, an exception-throwing statement that terminates the current
 control-flow block</p><p>We also provide a <a href="#rename(f:devsearch.normalized.Identifier=&gt;devsearch.normalized.Identifier):devsearch.normalized.Statement" class="extmbr" name="devsearch.normalized.Statement#rename">rename</a> utility method that is mainly used during
 the single-assignment transformation.
 </p></div><div class="toggleContainer block">

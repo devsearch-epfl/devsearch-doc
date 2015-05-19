@@ -39,18 +39,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base trait for DevSearch parsers</p><p>Each parser must specify the language for which is it intended in
-<code><code><code>scala
-def language: String
-<code><code><code>
-Note that this language must be defined in <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">Languages.orderedLangList</a> with associated
-meta-data. Furthermore, the meat-and-bones of the parser are defined in
-<code><code><code>scala
-def parse(source: Source): AST
-<code><code><code>
-which will transform a code source into an AST. Note that this function can throw <a href="ParsingFailedError.html" class="extype" name="devsearch.parsers.ParsingFailedError">ParsingFailedError</a>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base trait for DevSearch parsers</p><p>Each parser must specify the language for which is it intended in</p><pre><span class="kw">def</span> language: <span class="std">String</span></pre><p>Note that this language must be defined in <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">Languages.orderedLangList</a> with associated
+meta-data. Furthermore, the meat-and-bones of the parser are defined in</p><pre><span class="kw">def</span> parse(source: Source): AST</pre><p>which will transform a code source into an AST. Note that this function can throw <a href="ParsingFailedError.html" class="extype" name="devsearch.parsers.ParsingFailedError">ParsingFailedError</a>
 if the parsing fails due to invalid source code.
-</code></code></code></code></code></code></code></code></code></code></code></code></p></div><div class="toggleContainer block">
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">

@@ -39,13 +39,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Language parsers supported by the DevSearch project.</p><p>Parsers must conform to the <a href="Parser.html" class="extype" name="devsearch.parsers.Parser">parsers.Parser</a> interface that requires the methods
-<code><code><code>scala
-def language: String
-def parse(source: Source): AST
-<code><code><code>
-to be defined. In case of parsing failures, the </code>parse</code> method should throw
-<a href="ParsingFailedError.html" class="extype" name="devsearch.parsers.ParsingFailedError">parsers.ParsingFailedError</a> to provide information about invalid source code.</code></code></code></code></p><p>To enable language-agnostic parsing, the <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">parsers.Languages.orderedLangList</a> value should
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Language parsers supported by the DevSearch project.</p><p>Parsers must conform to the <a href="Parser.html" class="extype" name="devsearch.parsers.Parser">parsers.Parser</a> interface that requires the methods</p><pre><span class="kw">def</span> language: <span class="std">String</span>
+<span class="kw">def</span> parse(source: Source): AST</pre><p>to be defined. In case of parsing failures, the <code>parse</code> method should throw
+<a href="ParsingFailedError.html" class="extype" name="devsearch.parsers.ParsingFailedError">parsers.ParsingFailedError</a> to provide information about invalid source code.</p><p>To enable language-agnostic parsing, the <a href="Languages$.html#orderedLangList:List[(String,devsearch.parsers.Languages.LangSpec)]" class="extmbr" name="devsearch.parsers.Languages#orderedLangList">parsers.Languages.orderedLangList</a> value should
 be extended with any new parser additions.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
