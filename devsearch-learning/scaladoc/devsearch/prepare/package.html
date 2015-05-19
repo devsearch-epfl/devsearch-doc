@@ -70,7 +70,7 @@
         <a href="ArgumentException.html"><span class="name">ArgumentException</span></a><span class="params">(<span name="cause">cause: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Thrown when arguments are somehow incorrect.</p>
     </li><li name="devsearch.prepare.HashRingNode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HashRingNodeextendsSerializablewithProductwithSerializable"></a>
       <a id="HashRingNode:HashRingNode"></a>
@@ -84,6 +84,19 @@
       </span>
       </h4>
       
+    </li><li name="devsearch.prepare.JsonCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonCountextendsProductwithSerializable"></a>
+      <a id="JsonCount:JsonCount"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="JsonCount.html"><span class="name">JsonCount</span></a><span class="params">(<span name="feature">feature: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="language">language: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="count">count: <span class="extype" name="spray.json.JsObject">JsObject</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
     </li><li name="devsearch.prepare.JsonFeature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="JsonFeatureextendsProductwithSerializable"></a>
       <a id="JsonFeature:JsonFeature"></a>
@@ -93,20 +106,20 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="JsonFeature.html"><span class="name">JsonFeature</span></a><span class="params">(<span name="feature">feature: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="spray.json.JsObject">JsObject</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="JsonFeature.html"><span class="name">JsonFeature</span></a><span class="params">(<span name="feature">feature: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="spray.json.JsObject">JsObject</span></span>, <span name="repoRank">repoRank: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li name="devsearch.prepare.JsonLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="JsonLineextendsProductwithSerializable"></a>
-      <a id="JsonLine:JsonLine"></a>
+    </li><li name="devsearch.prepare.JsonNumberInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JsonNumberIntextendsProductwithSerializable"></a>
+      <a id="JsonNumberInt:JsonNumberInt"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="JsonLine.html"><span class="name">JsonLine</span></a><span class="params">(<span name="line">line: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="JsonNumberInt.html"><span class="name">JsonNumberInt</span></a><span class="params">(<span name="line">line: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">These three classes are needed for transforming RepoRanks and Features into JSON format.</p>
@@ -143,7 +156,20 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="devsearch.prepare.DataPreparer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="devsearch.prepare.CountJsonProtocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CountJsonProtocol"></a>
+      <a id="CountJsonProtocol:CountJsonProtocol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CountJsonProtocol$.html"><span class="name">CountJsonProtocol</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="devsearch.prepare.DataPreparer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DataPreparer"></a>
       <a id="DataPreparer:DataPreparer"></a>
       <h4 class="signature">
@@ -169,16 +195,16 @@
       </span>
       </h4>
       
-    </li><li name="devsearch.prepare.LineJsonProtocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LineJsonProtocol"></a>
-      <a id="LineJsonProtocol:LineJsonProtocol"></a>
+    </li><li name="devsearch.prepare.NumberIntJsonProtocol" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NumberIntJsonProtocol"></a>
+      <a id="NumberIntJsonProtocol:NumberIntJsonProtocol"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="LineJsonProtocol$.html"><span class="name">LineJsonProtocol</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
+        <a href="NumberIntJsonProtocol$.html"><span class="name">NumberIntJsonProtocol</span></a><span class="result"> extends <span class="extype" name="spray.json.DefaultJsonProtocol">DefaultJsonProtocol</span></span>
       </span>
       </h4>
       

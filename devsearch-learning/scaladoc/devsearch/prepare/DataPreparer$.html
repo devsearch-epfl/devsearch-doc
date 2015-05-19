@@ -48,7 +48,9 @@ https://github.com/JosephMoniz/scala-hash-ring and</p><p>Usage:
 - 1st argument is the input directory containing the feature files
 - 2nd argument is the input directory containing the repoRank files
 - 3rd argument is the output directory of the buckets
-- 4th argument is the number of buckets
+- 4th argument is the minimum number of counts. Features with a lower count are not being saved in the featureCount.
+- 5th argument is the number of buckets
+- 6th argument tells if stats shall be created or not. ('Y' = define stats)</p><p>MAKE SURE to give the job enough resources!
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
