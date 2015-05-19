@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">DocumentHits</span><span class="params">(<span name="location">location: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="hits">hits: <span class="extype" name="scala.Stream">Stream</span>[<a href="Hit.html" class="extype" name="devsearch.lookup.Hit">Hit</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">DocumentHits</span><span class="params">(<span name="location">location: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="repoRank">repoRank: <span class="extype" name="scala.Double">Double</span></span>, <span name="hits">hits: <span class="extype" name="scala.Stream">Stream</span>[<a href="Hit.html" class="extype" name="devsearch.lookup.Hit">Hit</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="devsearch.lookup.DocumentHits#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(location:devsearch.lookup.Location,hits:Stream[devsearch.lookup.Hit]):devsearch.lookup.DocumentHits"></a>
+      <a id="&lt;init&gt;(location:devsearch.lookup.Location,repoRank:Double,hits:Stream[devsearch.lookup.Hit]):devsearch.lookup.DocumentHits"></a>
       <a id="&lt;init&gt;:DocumentHits"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DocumentHits</span><span class="params">(<span name="location">location: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="hits">hits: <span class="extype" name="scala.Stream">Stream</span>[<a href="Hit.html" class="extype" name="devsearch.lookup.Hit">Hit</a>]</span>)</span>
+        <span class="name">DocumentHits</span><span class="params">(<span name="location">location: <a href="Location.html" class="extype" name="devsearch.lookup.Location">Location</a></span>, <span name="repoRank">repoRank: <span class="extype" name="scala.Double">Double</span></span>, <span name="hits">hits: <span class="extype" name="scala.Stream">Stream</span>[<a href="Hit.html" class="extype" name="devsearch.lookup.Hit">Hit</a>]</span>)</span>
       </span>
       </h4>
       
@@ -321,6 +321,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="devsearch.lookup.DocumentHits#repoRank" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="repoRank:Double"></a>
+      <a id="repoRank:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repoRank</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
